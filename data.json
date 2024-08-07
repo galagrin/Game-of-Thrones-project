@@ -1,0 +1,274 @@
+[
+    {
+        "id": 1,
+        "name": "Эддард Старк",
+        "title": "Лорд-хранитель Севера",
+        "causeOfDeath": "Казнён через обезглавливание",
+        "placeOfDeath": "Королевская Гавань",
+        "photo": "https://example.com/images/ned_stark.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Робб Старк",
+        "title": "Король Севера",
+        "causeOfDeath": "Убит на Красной свадьбе",
+        "placeOfDeath": "Близнецы",
+        "photo": "https://example.com/images/robb_stark.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Кейтлин Старк",
+        "title": "Леди Винтерфелла",
+        "causeOfDeath": "Убита на Красной свадьбе",
+        "placeOfDeath": "Близнецы",
+        "photo": "https://example.com/images/catelyn_stark.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Джофри Баратеон",
+        "title": "Король Андалов и Первых Людей",
+        "causeOfDeath": "Отравлен на свадьбе",
+        "placeOfDeath": "Королевская Гавань",
+        "photo": "https://example.com/images/joffrey_baratheon.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Кхал Дрого",
+        "title": "Кхал дотракийцев",
+        "causeOfDeath": "Инфекция и эвтаназия",
+        "placeOfDeath": "Дотракийское море",
+        "photo": "https://example.com/images/khal_drogo.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Тайвин Ланнистер",
+        "title": "Десница короля",
+        "causeOfDeath": "Застрелен из арбалета",
+        "placeOfDeath": "Королевская Гавань",
+        "photo": "https://example.com/images/tywin_lannister.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Ренли Баратеон",
+        "title": "Лорд Штормового Предела",
+        "causeOfDeath": "Убит тенью",
+        "placeOfDeath": "Штормовые земли",
+        "photo": "https://example.com/images/renly_baratheon.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Оберин Мартелл",
+        "title": "Принц Дорна",
+        "causeOfDeath": "Убит на судебном поединке",
+        "placeOfDeath": "Королевская Гавань",
+        "photo": "https://example.com/images/oberyn_martell.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Игритт",
+        "title": "Одичалая",
+        "causeOfDeath": "Застреленная стрелой",
+        "placeOfDeath": "Чёрный замок",
+        "photo": "https://example.com/images/ygritte.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Станнис Баратеон",
+        "title": "Король Андалов и Первых Людей",
+        "causeOfDeath": "Убит в бою",
+        "placeOfDeath": "Винтерфелл",
+        "photo": "https://example.com/images/stannis_baratheon.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Ширен Баратеон",
+        "title": "Принцесса",
+        "causeOfDeath": "Сожжена на костре",
+        "placeOfDeath": "Лагерь Станниса Баратеона",
+        "photo": "https://example.com/images/shireen_baratheon.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Ходор",
+        "title": "Слуга дома Старков",
+        "causeOfDeath": "Убит ожившими мертвецами",
+        "placeOfDeath": "Пещера Трёхглазого Ворона",
+        "photo": "https://example.com/images/hodor.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Рамси Болтон",
+        "title": "Лорд-хранитель Севера",
+        "causeOfDeath": "Съеден своими псами",
+        "placeOfDeath": "Винтерфелл",
+        "photo": "https://example.com/images/ramsay_bolton.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Маргери Тирелл",
+        "title": "Королева Семи Королевств",
+        "causeOfDeath": "Погибла при взрыве Великой Септы Бейлора",
+        "placeOfDeath": "Королевская Гавань",
+        "photo": "https://example.com/images/margaery_tyrell.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Лорас Тирелл",
+        "title": "Рыцарь Цветов",
+        "causeOfDeath": "Погиб при взрыве Великой Септы Бейлора",
+        "placeOfDeath": "Королевская Гавань",
+        "photo": "https://example.com/images/loras_tyrell.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Визерис Таргариен",
+        "title": "Принц династии Таргариенов",
+        "causeOfDeath": "Убит расплавленным золотом",
+        "placeOfDeath": "Ваэс Дотрак",
+        "photo": "https://example.com/images/viserys_targaryen.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Бейлон Грейджой",
+        "title": "Лорд Железных Островов",
+        "causeOfDeath": "Сброшен с моста",
+        "placeOfDeath": "Пайк",
+        "photo": "https://example.com/images/balon_greyjoy.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Мирцелла Баратеон",
+        "title": "Принцесса Семи Королевств",
+        "causeOfDeath": "Отравлена",
+        "placeOfDeath": "На корабле, возвращаясь в Королевскую Гавань",
+        "photo": "https://example.com/images/myrcella_baratheon.jpg"
+    },
+    {
+        "id": 19,
+        "name": "Роберт Баратеон",
+        "title": "Король Андалов и Первых Людей",
+        "causeOfDeath": "Убит во время охоты",
+        "placeOfDeath": "Королевская Гавань",
+        "photo": "https://example.com/images/robert_baratheon.jpg"
+    },
+    {
+        "id": 20,
+        "name": "Рикон Старк",
+        "title": "Лорд Винтерфелла",
+        "causeOfDeath": "Убит Рамси Болтоном",
+        "placeOfDeath": "Винтерфелл",
+        "photo": "https://example.com/images/rickon_stark.jpg"
+    },
+    {
+        "id": 21,
+        "name": "Тommen Баратеон",
+        "title": "Король Андалов и Первых Людей",
+        "causeOfDeath": "Покончил с собой",
+        "placeOfDeath": "Королевская Гавань",
+        "photo": "https://example.com/images/tommen_baratheon.jpg"
+    },
+    {
+        "id": 22,
+        "name": "Лиза Аррен",
+        "title": "Леди Долины",
+        "causeOfDeath": "Сброшена с Лунных дверей",
+        "placeOfDeath": "Орлиное гнездо",
+        "photo": "https://example.com/images/lysa_arren.jpg"
+    },
+    {
+        "id": 23,
+        "name": "Джон Аррен",
+        "title": "Десница короля",
+        "causeOfDeath": "Отравлен",
+        "placeOfDeath": "Королевская Гавань",
+        "photo": "https://example.com/images/jon_arren.jpg"
+    },
+    {
+        "id": 24,
+        "name": "Бенджен Старк",
+        "title": "Первый разведчик Ночного Дозора",
+        "causeOfDeath": "Убит Белыми Ходоками",
+        "placeOfDeath": "За Стеной",
+        "photo": "https://example.com/images/benjen_stark.jpg"
+    },
+    {
+        "id": 25,
+        "name": "Бриенна Тарт",
+        "title": "Леди Тарт",
+        "causeOfDeath": "Неизвестно (выжила в сериале)",
+        "placeOfDeath": "Неизвестно",
+        "photo": "https://example.com/images/brienne_tarth.jpg"
+    },
+    {
+        "id": 26,
+        "name": "Тирион Ланнистер",
+        "title": "Десница королевы",
+        "causeOfDeath": "Жив",
+        "placeOfDeath": "Неизвестно",
+        "photo": "https://example.com/images/tyrion_lannister.jpg"
+    },
+    {
+        "id": 27,
+        "name": "Серсея Ланнистер",
+        "title": "Королева Семи Королевств",
+        "causeOfDeath": "Погибла при обрушении Красного замка",
+        "placeOfDeath": "Королевская Гавань",
+        "photo": "https://example.com/images/cersei_lannister.jpg"
+    },
+    {
+        "id": 28,
+        "name": "Джейме Ланнистер",
+        "title": "Лорд-командующий Королевской Гвардии",
+        "causeOfDeath": "Погиб при обрушении Красного замка",
+        "placeOfDeath": "Королевская Гавань",
+        "photo": "https://example.com/images/jaime_lannister.jpg"
+    },
+    {
+        "id": 29,
+        "name": "Дейенерис Таргариен",
+        "title": "Королева Андалов и Первых Людей",
+        "causeOfDeath": "Убита Джоном Сноу",
+        "placeOfDeath": "Королевская Гавань",
+        "photo": "https://example.com/images/daenerys_targaryen.jpg"
+    },
+    {
+        "id": 30,
+        "name": "Джон Сноу",
+        "title": "Король Севера",
+        "causeOfDeath": "Жив",
+        "placeOfDeath": "Неизвестно",
+        "photo": "https://example.com/images/jon_snow.jpg"
+    },
+    {
+        "id": 31,
+        "name": "Король Ночи",
+        "title": "Лидер Белых Ходоков",
+        "causeOfDeath": "Убит Арьей Старк",
+        "placeOfDeath": "Винтерфелл",
+        "photo": "https://example.com/images/night_king.jpg"
+    },
+    {
+        "id": 32,
+        "name": "Дрогон",
+        "title": "Дракон Дейенерис Таргариен",
+        "causeOfDeath": "Жив",
+        "placeOfDeath": "Неизвестно",
+        "photo": "https://example.com/images/drogon.jpg"
+    },
+    {
+        "id": 33,
+        "name": "Рейгал",
+        "title": "Дракон Дейенерис Таргариен",
+        "causeOfDeath": "Убит баллистой",
+        "placeOfDeath": "На пути к Королевской Гавани",
+        "photo": "https://example.com/images/rhaegal.jpg"
+    },
+    {
+        "id": 34,
+        "name": "Визерион",
+        "title": "Дракон Дейенерис Таргариен",
+        "causeOfDeath": "Убит Королем Ночи и превращен в нежить",
+        "placeOfDeath": "За Стеной",
+        "photo": "https://example.com/images/viserion.jpg"
+    }
+]
