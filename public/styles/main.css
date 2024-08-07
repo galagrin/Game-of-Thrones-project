@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Game-of-Thrones";
+    src: url(../fonts/game-of-thrones-kg25.ttf);
+}
+@font-face {
+    font-family: "Trajan-Pro-3";
+    src: url(../fonts/Trajan-Pro-3-Regular.otf);
+}
+
+h2{
+    font-family: "Game-of-Thrones", sans-serif;
+}
+
+*{
+    font-family: "Trajan-Pro-3", sans-serif;
+}
