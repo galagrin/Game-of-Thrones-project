@@ -33,35 +33,28 @@
         </style>
     </head>
     <body>
-        <h2>Список персонажей</h2>
-        <div id="searchContainer">
-            <input
-                type="number"
-                id="characterIdInput"
-                placeholder="Введите ID персонажа"
-            />
-            <button id="searchBtn" class="btn">Искать</button>
-        </div>
-        <!-- <div id="characterButtons">
-            <button class="btn" data-id="1">Дейенерис Таргариен</button>
-            <button class="btn" data-id="2">Джон Сноу</button>
-            <button class="btn" data-id="3">Арья Старк</button>
-            <button class="btn" data-id="4">Тирион Ланнистер</button>
-            <button class="btn" data-id="5">Санса Старк</button>
-        </div> -->
-        <table>
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Имя</th>
-                    <th>Титул</th>
-                    <th>Причина смерти</th>
-                    <th>Место смерти</th>
-                    <th>Фото</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+        <header></header>
+        <main>
+            <!-- ОПИСАНИЕ (ПОКА ПРОСТО ДЛЯ ПРИМЕРА)-->
+            <h2>Игра престолов</h2>
+            <p>Награда за победу - Железный трон или просто... жизнь?</p>
+            <!-- ОПИСАНИЕ - КОНЕЦ -->
+
+            <!-- ПОИСК -->
+            <form autocomplete="off">
+                <div class="autocomplete">
+                    <input id="myInput" type="text" name="characterName" placeholder="Имя персонажа">
+                </div>
+                <button type="button" id="search">Искать</button>
+            </form>
+            <!-- ПОИСК - КОНЕЦ -->
+
+            <section id="card-container">
+
+            </section>
+        </main>
+        <footer></footer>
+
         <script src="scripts/script.js"></script>
     </body>
 </html>
