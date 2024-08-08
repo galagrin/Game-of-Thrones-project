@@ -5,7 +5,7 @@
         "title": "Лорд-хранитель Севера",
         "causeOfDeath": "Казнён через обезглавливание",
         "placeOfDeath": "Королевская Гавань",
-        "photo": "https://example.com/images/ned_stark.jpg"
+        "photo": "https://wallpaper.forfun.com/fetch/3e/3ec1d112b56a05dc948f593ec42ecee6.jpeg?w=1470&r=0.5625"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "title": "Король Севера",
         "causeOfDeath": "Убит на Красной свадьбе",
         "placeOfDeath": "Близнецы",
-        "photo": "https://example.com/images/robb_stark.jpg"
+        "photo": "https://wallpaper.forfun.com/fetch/52/5217b27df0873193bc41bbca92d61d97.jpeg?w=1470&r=0.5625"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "title": "Леди Винтерфелла",
         "causeOfDeath": "Убита на Красной свадьбе",
         "placeOfDeath": "Близнецы",
-        "photo": "https://example.com/images/catelyn_stark.jpg"
+        "photo": "https://wallpaper.forfun.com/fetch/d6/d6a4cd77cafa25ed95978ba0692bb8af.jpeg?w=1470&r=0.5625"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "title": "Король Андалов и Первых Людей",
         "causeOfDeath": "Отравлен на свадьбе",
         "placeOfDeath": "Королевская Гавань",
-        "photo": "https://example.com/images/joffrey_baratheon.jpg"
+        "photo": "https://pm1.aminoapps.com/7222/3f85a275f10a300c3cba9f12432f9fb343d3d763r1-600-800v2_uhq.jpg"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "title": "Кхал дотракийцев",
         "causeOfDeath": "Инфекция и эвтаназия",
         "placeOfDeath": "Дотракийское море",
-        "photo": "https://example.com/images/khal_drogo.jpg"
+        "photo": "https://7kingdoms.ru/w/images/thumb/0/05/Hbo-drogo.jpg/280px-Hbo-drogo.jpg"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "title": "Десница короля",
         "causeOfDeath": "Застрелен из арбалета",
         "placeOfDeath": "Королевская Гавань",
-        "photo": "https://example.com/images/tywin_lannister.jpg"
+        "photo": "https://avatars.dzeninfra.ru/get-zen_doc/1911692/pub_5f8eaaa575135c1999b91654_5f8eaccfd95e5c3d0b1d288a/scale_1200"
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "title": "Лорд Штормового Предела",
         "causeOfDeath": "Убит тенью",
         "placeOfDeath": "Штормовые земли",
-        "photo": "https://example.com/images/renly_baratheon.jpg"
+        "photo": "https://7kingdoms.ru/wp-content/uploads/2012/01/renly00.jpg"
     },
     {
         "id": 8,
@@ -61,7 +61,7 @@
         "title": "Принц Дорна",
         "causeOfDeath": "Убит на судебном поединке",
         "placeOfDeath": "Королевская Гавань",
-        "photo": "https://example.com/images/oberyn_martell.jpg"
+        "photo": "https://avatars.dzeninfra.ru/get-zen_doc/2380919/pub_6131ddf60c9dfe24ea1457d3_613306df9c06840180a2e67e/scale_1200"
     },
     {
         "id": 9,
@@ -69,7 +69,7 @@
         "title": "Одичалая",
         "causeOfDeath": "Застреленная стрелой",
         "placeOfDeath": "Чёрный замок",
-        "photo": "https://example.com/images/ygritte.jpg"
+        "photo": "https://avatars.dzeninfra.ru/get-zen_doc/1779163/pub_5ec610833fa8210c3e5dc490_5ec61fe74e183c2f7f55c36d/scale_1200"
     },
     {
         "id": 10,
@@ -77,7 +77,7 @@
         "title": "Король Андалов и Первых Людей",
         "causeOfDeath": "Убит в бою",
         "placeOfDeath": "Винтерфелл",
-        "photo": "https://example.com/images/stannis_baratheon.jpg"
+        "photo": "https://i.pinimg.com/736x/28/77/69/2877699a0a2faa927eed5a394534c4e1.jpg"
     },
     {
         "id": 11,
@@ -85,7 +85,7 @@
         "title": "Принцесса",
         "causeOfDeath": "Сожжена на костре",
         "placeOfDeath": "Лагерь Станниса Баратеона",
-        "photo": "https://example.com/images/shireen_baratheon.jpg"
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnyN0d9QQwVLp8EOEr-i3rjzFQRiSuzhobdA&s"
     },
     {
         "id": 12,
@@ -93,7 +93,7 @@
         "title": "Слуга дома Старков",
         "causeOfDeath": "Убит ожившими мертвецами",
         "placeOfDeath": "Пещера Трёхглазого Ворона",
-        "photo": "https://example.com/images/hodor.jpg"
+        "photo": "https://i.pinimg.com/originals/c6/fc/9a/c6fc9a5c39bd86c4e20e15ec1e138a02.jpg"
     },
     {
         "id": 13,
@@ -237,7 +237,7 @@
         "title": "Король Севера",
         "causeOfDeath": "Жив",
         "placeOfDeath": "Неизвестно",
-        "photo": "https://example.com/images/jon_snow.jpg"
+        "photo": "https://static.wikia.nocookie.net/gameofthrones/images/2/26/JonSnowFinal.jpg"
     },
     {
         "id": 31,
