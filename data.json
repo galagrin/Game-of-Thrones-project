@@ -270,5 +270,13 @@
         "causeOfDeath": "Убит Королем Ночи и превращен в нежить",
         "placeOfDeath": "За Стеной",
         "photo": "https://i.pinimg.com/originals/5b/57/02/5b5702e13ffd36b656d2604530f0c8c8.jpg"
+    },
+    {
+        "id": 35,
+        "name": "Санса Старк",
+        "title": "Королева Севера",
+        "causeOfDeath": "Жив",
+        "placeOfDeath": "Неизвестно",
+        "photo": "https://wallpaper.forfun.com/fetch/5a/5a3e52fa73adb3f3ba114f4bb5c34cd8.jpeg?w=1470&r=0.5625"
     }
 ]
