@@ -16,6 +16,11 @@
 }
 
 body {
+  background-image: url('../images/iron-throne.jpg');
+  background-color: #333;
+  background-size: cover;
+  background-position: center;
+  color: antiquewhite;
   max-width: 1920px;
   margin: 0 auto;
   width: 100%;
@@ -31,6 +36,24 @@ h2 {
 }
 
 /* ПРОБА - ПОИСК */
+.description {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.searchbar {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;

@@ -6,42 +6,19 @@
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/main.css" />
     <title>Персонажи Игры престолов</title>
-    <style>
-      td,
-      th {
-        padding: 5px;
-        min-width: 90px;
-        max-width: 200px;
-        text-align: start;
-      }
-      .photo {
-        width: 100px;
-        height: auto;
-      }
-      .btn {
-        padding: 4px;
-        border: 1px solid #333;
-        background-color: #eee;
-        border-radius: 2px;
-        margin: 5px;
-        cursor: pointer;
-        display: inline-block;
-      }
-      #searchContainer {
-        margin-bottom: 15px;
-      }
-    </style>
   </head>
   <body>
     <header></header>
     <main>
       <!-- ОПИСАНИЕ (ПОКА ПРОСТО ДЛЯ ПРИМЕРА)-->
-      <h1>Игра престолов</h1>
-      <p>Награда за победу - Железный трон или просто... жизнь?</p>
+      <div class="description">
+        <h1 class="title">Игра престолов</h1>
+        <p>Награда за победу - Железный трон или просто... жизнь?</p>
+      </div>
       <!-- ОПИСАНИЕ - КОНЕЦ -->
 
       <!-- ПОИСК -->
-      <form autocomplete="off">
+      <form class="searchbar" autocomplete="off">
         <div class="autocomplete">
           <input
             id="myInput"
