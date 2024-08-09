@@ -92,10 +92,13 @@ input[type="submit"] {
 .card {
   margin: auto;
   width: 50%;
+  position: relative;
+  z-index: 2;
 }
 
 .character-pic {
   width: 400px;
+  display: none;
 }
 /* ПРОБА - ПОИСК */
 
@@ -136,5 +139,18 @@ input[type="submit"] {
   width: 100%;
   height: 500px;
   padding: 20px;
+  position: relative;
+  color: #fff;
+}
+
+#card-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 /* КАРТОЧКА ГЕРОЯ */
