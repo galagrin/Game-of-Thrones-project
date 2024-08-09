@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" href="./styles/normalize.css">
-        <link rel="stylesheet" href="./styles/main.css">
-        <title>Персонажи Игры престолов</title>
-        <style>
-            td,
-            th {
-                padding: 5px;
-                min-width: 90px;
-                max-width: 200px;
-                text-align: start;
-            }
-            .photo {
-                width: 100px;
-                height: auto;
-            }
-            .btn {
-                padding: 4px;
-                border: 1px solid #333;
-                background-color: #eee;
-                border-radius: 2px;
-                margin: 5px;
-                cursor: pointer;
-                display: inline-block;
-            }
-            #searchContainer {
-                margin-bottom: 15px;
-            }
-        </style>
-    </head>
-    <body>
-        <header></header>
-        <main>
-            <!-- ОПИСАНИЕ (ПОКА ПРОСТО ДЛЯ ПРИМЕРА)-->
-            <h1>Игра престолов</h1>
-            <p>Награда за победу - Железный трон или просто... жизнь?</p>
-            <!-- ОПИСАНИЕ - КОНЕЦ -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Персонажи Игры престолов</title>
+    <style>
+      td,
+      th {
+        padding: 5px;
+        min-width: 90px;
+        max-width: 200px;
+        text-align: start;
+      }
+      .photo {
+        width: 100px;
+        height: auto;
+      }
+      .btn {
+        padding: 4px;
+        border: 1px solid #333;
+        background-color: #eee;
+        border-radius: 2px;
+        margin: 5px;
+        cursor: pointer;
+        display: inline-block;
+      }
+      #searchContainer {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <!-- ОПИСАНИЕ (ПОКА ПРОСТО ДЛЯ ПРИМЕРА)-->
+      <h1>Игра престолов</h1>
+      <p>Награда за победу - Железный трон или просто... жизнь?</p>
+      <!-- ОПИСАНИЕ - КОНЕЦ -->
 
-            <!-- ПОИСК -->
-            <form autocomplete="off">
-                <div class="autocomplete">
-                    <input id="myInput" type="text" name="characterName" placeholder="Имя персонажа">
-                </div>
-                <button type="button" id="search">Искать</button>
-            </form>
-            <!-- ПОИСК - КОНЕЦ -->
+      <!-- ПОИСК -->
+      <form autocomplete="off">
+        <div class="autocomplete">
+          <input
+            id="myInput"
+            type="text"
+            name="characterName"
+            placeholder="Имя персонажа"
+          />
+        </div>
+        <button type="button" id="search">Искать</button>
+      </form>
+      <!-- ПОИСК - КОНЕЦ -->
 
-            <section id="card-container">
+      <section id="card-container"></section>
 
-            </section>
+      <!-- ЦИТАТЫ -->
+      <section id="quote-container">
+        <!-- ЦИТАТЫ - КОНЕЦ -->
+      </section>
+    </main>
+    <footer></footer>
 
-            <!-- ЦИТАТЫ -->
-        <section id="quote-container">
-            <!-- ЦИТАТЫ - КОНЕЦ -->
-        </section>
-        </main>
-        <footer></footer>
-
-        <script src="scripts/script.js"></script>
-    </body>
+    <script src="scripts/script.js"></script>
+  </body>
 </html>
