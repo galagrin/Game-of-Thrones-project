@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <title>Персонажи Игры престолов</title>
-  </head>
-  <body>
-    <header></header>
-    <main>
-      <!-- ОПИСАНИЕ (ПОКА ПРОСТО ДЛЯ ПРИМЕРА)-->
-      <div class="description">
-        <h1 class="title">Игра престолов</h1>
-        <p>Награда за победу - Железный трон или просто... жизнь?</p>
-      </div>
-      <!-- ОПИСАНИЕ - КОНЕЦ -->
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="./styles/normalize.css" />
+		<link rel="stylesheet" href="./styles/main.css" />
+		<title>Персонажи Игры престолов</title>
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<!-- ОПИСАНИЕ (ПОКА ПРОСТО ДЛЯ ПРИМЕРА)-->
+			<div class="description">
+				<h1 class="title">Игра престолов</h1>
+				<p>Награда за победу - Железный трон или просто... жизнь?</p>
+			</div>
+			<!-- ОПИСАНИЕ - КОНЕЦ -->
 
-      <!-- ПОИСК -->
-      <form class="searchbar" autocomplete="off">
-        <div class="autocomplete">
-          <input
-            id="myInput"
-            type="text"
-            name="characterName"
-            placeholder="Имя персонажа"
-          />
-        </div>
-        <button type="button" id="search">Искать</button>
-      </form>
-      <!-- ПОИСК - КОНЕЦ -->
+			<!-- ПОИСК -->
+			<form class="searchbar" autocomplete="off">
+				<div class="autocomplete">
+					<input
+						id="myInput"
+						type="text"
+						name="characterName"
+						placeholder="Имя персонажа"
+					/>
+				</div>
+				<button type="button" id="search">Искать</button>
+			</form>
+			<!-- ПОИСК - КОНЕЦ -->
 
-      <section id="card-container"></section>
+			<section id="card-container"></section>
 
-      <!-- ЦИТАТЫ -->
-      <section id="quote-container">
-        <!-- ЦИТАТЫ - КОНЕЦ -->
-      </section>
-    </main>
-    <footer></footer>
+			<!-- КАРТА И ЦИТАТЫ -->
+			<section id="map-quote-section">
+				<div id="map-container"></div>
+				<div id="quote-container"></div>
+			</section>
+			<!-- КАРТА И ЦИТАТЫ КОНЕЦ -->
+		</main>
+		<footer></footer>
 
-    <script src="scripts/script.js"></script>
-  </body>
+		<script src="scripts/script.js"></script>
+	</body>
 </html>

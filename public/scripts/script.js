@@ -85,165 +85,234 @@
 // ПОИСК
 
 function autocomplete(inp, arr) {
-  /*the autocomplete function takes two arguments,
+	/*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
-  var currentFocus;
-  /*execute a function when someone writes in the text field:*/
-  inp.addEventListener("input", function (e) {
-    var a,
-      b,
-      i,
-      val = this.value;
-    /*close any already open lists of autocompleted values*/
-    closeAllLists();
-    if (!val) {
-      return false;
-    }
-    currentFocus = -1;
-    /*create a DIV element that will contain the items (values):*/
-    a = document.createElement("DIV");
-    a.setAttribute("id", this.id + "autocomplete-list");
-    a.setAttribute("class", "autocomplete-items");
-    /*append the DIV element as a child of the autocomplete container:*/
-    this.parentNode.appendChild(a);
-    /*for each item in the array...*/
-    for (i = 0; i < arr.length; i++) {
-      /*check if the item starts with the same letters as the text field value:*/
-      if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-        /*create a DIV element for each matching element:*/
-        b = document.createElement("DIV");
-        /*make the matching letters bold:*/
-        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-        b.innerHTML += arr[i].substr(val.length);
-        /*insert a input field that will hold the current array item's value:*/
-        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-        /*execute a function when someone clicks on the item value (DIV element):*/
-        b.addEventListener("click", function (e) {
-          /*insert the value for the autocomplete text field:*/
-          inp.value = this.getElementsByTagName("input")[0].value;
-          /*close the list of autocompleted values,
+	var currentFocus;
+	/*execute a function when someone writes in the text field:*/
+	inp.addEventListener('input', function (e) {
+		var a,
+			b,
+			i,
+			val = this.value;
+		/*close any already open lists of autocompleted values*/
+		closeAllLists();
+		if (!val) {
+			return false;
+		}
+		currentFocus = -1;
+		/*create a DIV element that will contain the items (values):*/
+		a = document.createElement('DIV');
+		a.setAttribute('id', this.id + 'autocomplete-list');
+		a.setAttribute('class', 'autocomplete-items');
+		/*append the DIV element as a child of the autocomplete container:*/
+		this.parentNode.appendChild(a);
+		/*for each item in the array...*/
+		for (i = 0; i < arr.length; i++) {
+			/*check if the item starts with the same letters as the text field value:*/
+			if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+				/*create a DIV element for each matching element:*/
+				b = document.createElement('DIV');
+				/*make the matching letters bold:*/
+				b.innerHTML = '<strong>' + arr[i].substr(0, val.length) + '</strong>';
+				b.innerHTML += arr[i].substr(val.length);
+				/*insert a input field that will hold the current array item's value:*/
+				b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+				/*execute a function when someone clicks on the item value (DIV element):*/
+				b.addEventListener('click', function (e) {
+					/*insert the value for the autocomplete text field:*/
+					inp.value = this.getElementsByTagName('input')[0].value;
+					/*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
-          closeAllLists();
-        });
-        a.appendChild(b);
-      }
-    }
-  });
-  /*execute a function presses a key on the keyboard:*/
-  inp.addEventListener("keydown", function (e) {
-    var x = document.getElementById(this.id + "autocomplete-list");
-    if (x) x = x.getElementsByTagName("div");
-    if (e.keyCode == 40) {
-      /*If the arrow DOWN key is pressed,
+					closeAllLists();
+				});
+				a.appendChild(b);
+			}
+		}
+	});
+	/*execute a function presses a key on the keyboard:*/
+	inp.addEventListener('keydown', function (e) {
+		var x = document.getElementById(this.id + 'autocomplete-list');
+		if (x) x = x.getElementsByTagName('div');
+		if (e.keyCode == 40) {
+			/*If the arrow DOWN key is pressed,
         increase the currentFocus variable:*/
-      currentFocus++;
-      /*and and make the current item more visible:*/
-      addActive(x);
-    } else if (e.keyCode == 38) {
-      //up
-      /*If the arrow UP key is pressed,
+			currentFocus++;
+			/*and and make the current item more visible:*/
+			addActive(x);
+		} else if (e.keyCode == 38) {
+			//up
+			/*If the arrow UP key is pressed,
         decrease the currentFocus variable:*/
-      currentFocus--;
-      /*and and make the current item more visible:*/
-      addActive(x);
-    } else if (e.keyCode == 13) {
-      /*If the ENTER key is pressed, prevent the form from being submitted,*/
-      e.preventDefault();
-      if (currentFocus > -1) {
-        /*and simulate a click on the "active" item:*/
-        if (x) x[currentFocus].click();
-      }
-    }
-  });
-  function addActive(x) {
-    /*a function to classify an item as "active":*/
-    if (!x) return false;
-    /*start by removing the "active" class on all items:*/
-    removeActive(x);
-    if (currentFocus >= x.length) currentFocus = 0;
-    if (currentFocus < 0) currentFocus = x.length - 1;
-    /*add class "autocomplete-active":*/
-    x[currentFocus].classList.add("autocomplete-active");
-  }
-  function removeActive(x) {
-    /*a function to remove the "active" class from all autocomplete items:*/
-    for (var i = 0; i < x.length; i++) {
-      x[i].classList.remove("autocomplete-active");
-    }
-  }
-  function closeAllLists(elmnt) {
-    /*close all autocomplete lists in the document,
+			currentFocus--;
+			/*and and make the current item more visible:*/
+			addActive(x);
+		} else if (e.keyCode == 13) {
+			/*If the ENTER key is pressed, prevent the form from being submitted,*/
+			e.preventDefault();
+			if (currentFocus > -1) {
+				/*and simulate a click on the "active" item:*/
+				if (x) x[currentFocus].click();
+			}
+		}
+	});
+	function addActive(x) {
+		/*a function to classify an item as "active":*/
+		if (!x) return false;
+		/*start by removing the "active" class on all items:*/
+		removeActive(x);
+		if (currentFocus >= x.length) currentFocus = 0;
+		if (currentFocus < 0) currentFocus = x.length - 1;
+		/*add class "autocomplete-active":*/
+		x[currentFocus].classList.add('autocomplete-active');
+	}
+	function removeActive(x) {
+		/*a function to remove the "active" class from all autocomplete items:*/
+		for (var i = 0; i < x.length; i++) {
+			x[i].classList.remove('autocomplete-active');
+		}
+	}
+	function closeAllLists(elmnt) {
+		/*close all autocomplete lists in the document,
     except the one passed as an argument:*/
-    var x = document.getElementsByClassName("autocomplete-items");
-    for (var i = 0; i < x.length; i++) {
-      if (elmnt != x[i] && elmnt != inp) {
-        x[i].parentNode.removeChild(x[i]);
-      }
-    }
-  }
-  /*execute a function when someone clicks in the document:*/
-  document.addEventListener("click", function (e) {
-    closeAllLists(e.target);
-  });
+		var x = document.getElementsByClassName('autocomplete-items');
+		for (var i = 0; i < x.length; i++) {
+			if (elmnt != x[i] && elmnt != inp) {
+				x[i].parentNode.removeChild(x[i]);
+			}
+		}
+	}
+	/*execute a function when someone clicks in the document:*/
+	document.addEventListener('click', function (e) {
+		closeAllLists(e.target);
+	});
 }
 
 let names = [];
 
-fetch("http://localhost:3000/api/characters")
-  .then((res) => res.json())
-  .then((characters) => {
-    characters.forEach((character) => {
-      names.push(character.name);
-    });
-  });
+fetch('http://localhost:3000/api/characters')
+	.then(res => res.json())
+	.then(characters => {
+		characters.forEach(character => {
+			names.push(character.name);
+		});
+	});
 
-autocomplete(document.getElementById("myInput"), names);
+autocomplete(document.getElementById('myInput'), names);
 
-const cardContainer = document.getElementById("card-container");
-const searchButton = document.getElementById("search");
+const cardContainer = document.getElementById('card-container');
+const searchButton = document.getElementById('search');
 
 const renderCard = () => {
-  fetch("http://localhost:3000/api/characters")
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        cardContainer.textContent =
-          "Не удалось отобразить информацию: " + response.status;
-        return Promise.reject(response.status);
-      }
-    })
-    .then((characters) => {
-      const character = characters.find((c) => c.name === myInput.value);
-      if (character) {
-        //Set the background image of the card container
-        cardContainer.style.backgroundImage = `url(${character.photo})`;
-        cardContainer.style.backgroundSize = "cover";
-        cardContainer.style.backgroundPosition = "center";
-        cardContainer.style.backgroundRepeat = "no-repeat";
+	fetch('http://localhost:3000/api/characters')
+		.then(response => {
+			if (response.ok) {
+				return response.json();
+			} else {
+				cardContainer.textContent =
+					'Не удалось отобразить информацию: ' + response.status;
+				return Promise.reject(response.status);
+			}
+		})
+		.then(characters => {
+			const character = characters.find(c => c.name === myInput.value);
+			if (character) {
+				//Set the background image of the card container
+				cardContainer.style.backgroundImage = `url(${character.photo})`;
+				cardContainer.style.backgroundSize = 'cover';
+				cardContainer.style.backgroundPosition = 'center';
+				cardContainer.style.backgroundRepeat = 'no-repeat';
 
-        //Create and display the card details
-        cardContainer.innerHTML = `<div class="card">
+				//Create and display the card details
+				cardContainer.innerHTML = `<div class="card">
         <h2>${character.name}</h2>
         <p>Титул: ${character.title}</p>
         <p>Причина смерти: ${character.causeOfDeath}</p>
         <p>Место смерти: ${character.placeOfDeath}</p>
         </div>`;
-      } else {
-        cardContainer.innerHTML = "Персонаж не найден.";
-      }
-    })
-    .catch((error) => {
-      cardContainer.textContent =
-        "Не удалось отобразить информацию: " + error.message;
-    });
+			} else {
+				cardContainer.innerHTML = 'Персонаж не найден.';
+			}
+		})
+		.catch(error => {
+			cardContainer.textContent =
+				'Не удалось отобразить информацию: ' + error.message;
+		});
 };
 
-searchButton.addEventListener("click", renderCard);
-myInput.addEventListener("focus", () => {
-  if (myInput.value.length !== 0) {
-    myInput.value = "";
-  }
+searchButton.addEventListener('click', renderCard);
+myInput.addEventListener('focus', () => {
+	if (myInput.value.length !== 0) {
+		myInput.value = '';
+	}
 });
 
 // ПОИСК
+
+// ЦИТАТЫ
+const quotes = [
+	{
+		text: 'Начнем убивать мужчин на свадьбах — и они будут бояться брака еще больше, чем прежде.',
+		author: 'Оленна Тирелл (Буря мечей)',
+	},
+	{
+		text: 'Мир — это не просто место, где мы живем. Это место, где мы сражаемся, за что стоит бороться.',
+		author: 'Дейенерис Таргариен (Танец драконов)',
+	},
+	{
+		text: 'Когда люди говорят о справедливости, они часто подразумевают месть.',
+		author: 'Джон Сноу (Ветра зимы)',
+	},
+	{
+		text: 'Время никогда не ждет. Оно ускользает, пока мы тратим его на мелочи.',
+		author: 'Серсея Ланнистер (Пиршество воробья)',
+	},
+	{
+		text: 'Каждый человек выбирает свою судьбу. Ты сам выбираешь, как будешь жить свою жизнь.',
+		author: 'Арья Старк (Становление героем)',
+	},
+	{
+		text: 'Смелость — это не отсутствие страха, а умение идти вперед, несмотря на него.',
+		author: 'Бриенна Тарт (Пляска с драконами)',
+	},
+	{
+		text: 'Я не могу быть нормальным человеком, когда вокруг меня так много глупцов.',
+		author: 'Тирион Ланнистер (Буря мечей)',
+	},
+	{
+		text: 'Когда все кажется разрушенным, помни, что есть еще один путь. Вперёд, а не назад.',
+		author: 'Санса Старк (Ветра зимы)',
+	},
+	{
+		text: 'Лучше умереть на поле боя, чем остаться в тени за спиной другого.',
+		author: 'Джорах Мормонт (Танец драконов)',
+	},
+];
+
+function displayQuote() {
+	const quoteContainer = document.getElementById('quote-container');
+	quoteContainer.innerHTML = '';
+
+	const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+	const quoteItem = document.createElement('div');
+	quoteItem.className = 'quote-item';
+
+	const quoteText = document.createElement('p');
+	quoteText.className = 'quote-text';
+	quoteText.textContent = `"${randomQuote.text}"`;
+	quoteItem.appendChild(quoteText);
+
+	const quoteAuthor = document.createElement('p');
+	quoteAuthor.className = 'quote-author';
+	quoteAuthor.textContent = `— ${randomQuote.author}`;
+	quoteItem.appendChild(quoteAuthor);
+
+	quoteContainer.appendChild(quoteItem);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	displayQuote();
+	setInterval(displayQuote, 30000); // сейчас таймаут 30 сек
+});
+
+// ЦИТАТЫ
