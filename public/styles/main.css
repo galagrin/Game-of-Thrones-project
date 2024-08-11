@@ -58,7 +58,6 @@ h2 {
 }
 
 .autocomplete {
-  /*the container must be positioned relative:*/
   position: relative;
   display: inline-block;
 }
@@ -209,6 +208,7 @@ h2 {
 }
 
 figure {
+  margin: 2rem 0;
   text-align: center;
 }
 
@@ -235,6 +235,22 @@ figure {
     -moz-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.autoRotate {
+  width: 150px;
+  animation: autoRotateAnimation;
+  animation-timeline: view();
+}
+
+@keyframes autoRotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
     transform: rotate(360deg);
   }
 }

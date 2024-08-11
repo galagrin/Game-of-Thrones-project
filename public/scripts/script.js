@@ -127,12 +127,13 @@ const renderCard = () => {
           "url('/public/images/iron-throne.jpg')";
         cardContainer.style.backgroundPosition = "top center";
       }
-      loader.classList.remove("display");
     })
     .catch((error) => {
-      loader.classList.remove("display");
       cardContainer.textContent =
-        "Не удалось отобразить информацию: " + error.message;
+        "Не удалось отобразить информацию: " + error;
+    })
+    .finally(() => {
+        loader.classList.remove("display");
     });
 };
 
