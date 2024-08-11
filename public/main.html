@@ -10,7 +10,7 @@
     <body>
         <header></header>
         <main>
-            <!-- ОПИСАНИЕ (ПОКА ПРОСТО ДЛЯ ПРИМЕРА)-->
+            <!-- ОПИСАНИЕ -->
             <div class="description">
                 <h1 class="title">Игра престолов</h1>
                 <p class="description__text">
@@ -18,6 +18,23 @@
                 </p>
             </div>
             <!-- ОПИСАНИЕ - КОНЕЦ -->
+
+			<!-- ГАЛЕРЕЯ - КАРТЫ -->
+			<div class="deck-container">
+				<div class="deck__item"><img class="deck__img" src="./images/01.jpeg" alt=""></div>
+				<div class="deck__item"><img class="deck__img" src="./images/02.jpeg" alt=""></div>
+				<div class="deck__item"><img class="deck__img" src="./images/03.jpeg" alt=""></div>
+				<div class="deck__item"><img class="deck__img" src="./images/04.jpeg" alt=""></div>
+				<div class="deck__item"><img class="deck__img" src="./images/05.jpeg" alt=""></div>
+				<div class="deck__item"><img class="deck__img" src="./images/06.jpeg" alt=""></div>
+				<div class="deck__item"><img class="deck__img" src="./images/07.jpeg" alt=""></div>
+				<div class="deck__item"><img class="deck__img" src="./images/08.jpeg" alt=""></div>
+				<div class="deck__item"><img class="deck__img" src="./images/09.jpeg" alt=""></div>
+				<div class="deck__item"><img class="deck__img" src="./images/10.jpeg" alt=""></div>
+				<div class="deck__item"><img class="deck__img" src="./images/11.jpeg" alt=""></div>
+				<div class="deck__item"><img class="deck__img" src="./images/12.jpeg" alt=""></div>
+			</div>
+			<!-- ГАЛЕРЕЯ - КАРТЫ - КОНЕЦ -->
 
             <!-- ПОИСК -->
             <form class="searchbar" autocomplete="off">
@@ -30,16 +47,12 @@
                     />
                 </div>
                 <button type="button" id="search">Искать</button>
+				<div id="loading">
+					<figure>
+						<img src="./images/targaryen-logo_antique.png" alt="" class="infiniteRotate" />
+					</figure>
+				</div>
             </form>
-            <div id="loading">
-                <figure>
-                    <img
-                        src="./images/targaryen-logo_antique.png"
-                        alt=""
-                        class="infiniteRotate"
-                    />
-                </figure>
-            </div>
             <section id="card-container"></section>
 			<figure>
 				<img src="./images/targaryen-logo_antique.png" alt="" class="autoRotate">

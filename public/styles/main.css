@@ -63,9 +63,9 @@ h2 {
 }
 
 #myInput {
-  border: 1px solid #575756;
+  border: 2px solid #343433;
   padding: 10px;
-  font-size: 16px;
+  font-size: 20px;
   background-color: transparent;
   border-radius: 50px;
   color: antiquewhite;
@@ -74,12 +74,12 @@ h2 {
 #myInput:focus {
   outline: 0;
   border: 1px solid transparent;
-  border-bottom: 1px solid #575756;
+  border-bottom: 2px solid #343433;
   border-radius: 0;
 }
 
 #myInput::placeholder {
-  color: #575756;
+  color: #343433;
 }
 
 #myInput[type="text"] {
@@ -115,6 +115,7 @@ h2 {
 #search {
   margin-left: 2rem;
   padding: 10px;
+  font-size: 20px;
   cursor: pointer;
   border-radius: 50px;
   border: none;
@@ -197,7 +198,7 @@ h2 {
 
 #loading {
   position: absolute;
-  top: 20rem;
+  top: 50rem;
   left: 40%;
   z-index: 99;
   visibility: hidden;
@@ -310,3 +311,61 @@ figure {
   text-align: right;
 }
 /* ЦИТАТЫ */
+
+
+/* ГАЛЕРЕЯ - КАРТЫ */
+
+.deck-container {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.deck__img {
+  margin-right: 3px;
+  width: 100px;
+}
+
+.deck-container .deck__item {
+  transition: .5s;
+  filter:opacity(0.1);
+}
+
+.deck-container .deck__item:hover {
+  filter: opacity(1);
+  transform: translateZ(200px);
+}
+
+.deck-container .deck__item:hover+* {
+  filter: opacity(0.6);
+  transform: translateZ(150px) rotateY(40deg);
+}
+
+.deck-container .deck__item:hover+*+* {
+  filter: opacity(0.4);
+  transform: translateZ(70px) rotateY(20deg);
+}
+
+.deck-container .deck__item:hover+*+*+* {
+  filter: opacity(0.2);
+  transform: translateZ(30px) rotateY(10deg);
+}
+
+.deck-container .deck__item:has(+ * :hover) {
+  filter: opacity(0.6);
+  transform: translateZ(150px) rotateY(-40deg);
+}
+
+.deck-container .deck__item:has(+ * + *:hover) {
+  filter: opacity(0.4);
+  transform: translateZ(70px) rotateY(-20deg);
+}
+
+.deck-container .deck__item:has(+ * + * + *:hover) {
+  filter: opacity(0.2);
+  transform: translateZ(30px) rotateY(-10deg);
+}
+
+/* ГАЛЕРЕЯ - КАРТЫ - КОНЕЦ */
