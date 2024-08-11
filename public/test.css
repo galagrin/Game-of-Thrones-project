@@ -1,0 +1,173 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Game-of-Thrones";
+  src: url(./fonts/game-of-thrones-kg25.ttf);
+}
+@font-face {
+  font-family: "Trajan-Pro-3";
+  src: url(./fonts/Trajan-Pro-3-Regular.otf);
+}
+body {
+    background-image: url("../images/mist-white-fog-wallpaper.jpg");
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: darken;
+    background-size: cover;
+    color: antiquewhite;
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+  }
+* {
+  font-family: "Trajan-Pro-3", sans-serif;
+}
+h2{
+    font-family: "Game-of-Thrones", "san-serif";
+}
+h3{
+    background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 5px;
+}
+.title {
+    background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* //СЕКЦИЯ РЕЦЕПТОВ */
+.title_font{
+    font-size: 40px;
+    text-align: center;
+    margin: 20px auto;
+}
+.content__link{
+    background: linear-gradient(to bottom, #cfc09f 27%, #dbb238 40%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.recipes{
+    display: flex;
+    position: relative;
+    margin: 50px auto;
+    transform-style: preserve-3d;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 70%;
+}
+.recipes .recipe-box{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+}
+.recipes.recipe-box:hover{
+    box-shadow: 0 50px 80px rgba(0,0,0,.2);
+}
+.recipes .recipe-box .recipe-box__image{
+    position: absolute;
+}
+.recipes .recipe-box .recipe-box__content{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
+    transform: translateZ(20px) scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+    transform-style: preserve-3d;
+    padding: 20px 5px;
+}
+.content__title{
+    font-family: "Game-of-Thrones", "san-serif";
+    font-size: 26px;
+    margin: 25px 10px;
+}
+.recipes .recipe-box:hover .recipe-box__content{
+    transform: translateZ(30px) scaleY(1);
+}
+.photo{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #3a2c0f;
+}
+
+
+/* //СТРАНИЧКА КОНКРЕТНОГО РЕЦЕПТА */
+.recipe{
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    flex-direction: column;
+    padding: 20px;
+}
+.recipe__quotation{
+    text-align: center;
+    font-style: italic;
+    padding: 40px;
+    border-radius: 40px;
+    border: 1px solid #3a2c0f;
+}
+.recipe__quotation-name{
+   text-align: end;
+   margin-top: 20px;
+}
+.recipe__container{
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.recipe__container-block{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    width: 40%;
+    justify-content: center;
+}
+.recipe__container-image{
+    width: 60%;
+}
+.recipe__timing{
+    color:#3a2c0f;
+    font-weight: 900;
+    
+}
+.recipe__info{
+    margin-top: 60px;
+}
+.recipe__ingredients{
+    margin-top: 40px;
+    text-align: start;
+    color:#3a2c0f;
+    padding: 10px;
+    border-top: 1px solid #3a2c0f;
+    border-bottom: 1px solid #3a2c0f;
+}
+.recipe__text{
+    text-align: center;
+    margin-top: 40px;
+}
+.recipe-photo{
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+}
+li{
+    list-style-type: "- ";
+}

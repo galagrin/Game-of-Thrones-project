@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./test.css">
+</head>
+<body>
+    <h2 class="title title_font">Ешь досыта , дружище . Зима близко.</h2>
+    <div class="recipes">
+        <div class="recipe-box">
+            <div class="recipe-box__image">
+                <img class="photo" src="./images/recipes/pie.webp" alt="Пирог с голубиным мясом">
+            </div>
+            <div class="recipe-box__content content">
+                <h3 class="content__title">Пирог с голубиным мясом</h3>
+                <a class="content__link" target="_blank" href="./recipebook/pie.html">Подробнее...</a>
+            </div>
+        </div>
+        <div class="recipe-box">
+            <div class="recipe-box__image">
+                <img class="photo" src="./images/recipes/pear.png" alt="Пряные груши в вине ">
+            </div>
+            <div class="recipe-box__content content">
+                <h3 class="content__title">Пряные груши в вине </h3>
+                <a class="content__link" target="_blank" href="./recipebook/pear.html">Подробнее...</a>
+            </div>
+        </div>
+        <div class="recipe-box">
+            <div class="recipe-box__image">
+                <img class="photo" src="./images/recipes/bull.png" alt="Дикий бык, запеченный с пореем">
+            </div>
+            <div class="recipe-box__content content">
+                <h3 class="content__title">Дикий бык, запеченный с пореем</h3>
+                <a class="content__link" target="_blank" href="./recipebook/bull.html">Подробнее...</a>
+            </div>
+        </div>
+        <div class="recipe-box">
+            <div class="recipe-box__image">
+                <img class="photo" src="./images/recipes/apple.png" alt="Печеные яблоки">
+            </div>
+            <div class="recipe-box__content content">
+                <h3 class="content__title">Печеные яблоки</h3>
+                <a class="content__link" target="_blank" href="./recipebook/apple.html">Подробнее...</a>
+            </div>
+        </div>
+        <div class="recipe-box">
+            <div class="recipe-box__image ">
+                <img class="photo" src="./images/recipes/cake.png" alt="Лимонные пирожные">
+            </div>
+            <div class="recipe-box__content content">
+                <h3>Лимонные пирожные</h3>
+                <p>Далее принесли телячьи зобные железы и пирог с голубиным мясом, печеные яблоки с корицей и лимонные пирожные в сахарной глазури, но Санса к этому времени уже наелась досыта и смогла управиться только с двумя лимонными пирожными — больше бы не влезло, как бы она ни любила их.</p>
+                <a class="content__link" target="_blank" href="./recipebook/cake.html">Подробнее...</a>
+            </div>
+        </div>
+        <div class="recipe-box">
+            <div class="recipe-box__image">
+                <img class="photo" src="./images/recipes/chiken.png" alt="Курица в меду">
+            </div>
+            <div class="recipe-box__content content">
+                <h3>Курица в меду</h3>
+                <p>«Что, опять проголодался?» На столе еще оставалось полкурицы в меду. Джон протянул было руку, чтобы отломить ножку, но вдруг передумал. Он вонзил в  тушку нож и  бросил ее на  пол между ног. Призрак покорно и беззвучно впился в нее клыками.</p>
+                <a class="content__link" target="_blank" href="./recipebook/chiken.html">Подробнее...</a>
+            </div>
+        </div>
+        <div class="recipe-box">
+            <div class="recipe-box__image">
+                <img class="photo" src="./images/recipes/wildboar.png" alt="Запеченное мясо кабана">
+            </div>
+            <div class="recipe-box__content content">
+                <h3>Запеченное мясо кабана</h3>
+                <p>«Санса, — вмешалась леди Алерия, — вы, должно быть, проголодались. Не желаете ли разделить со мной трапезу и отведать мяса кабана и лимонных кексов?»</p>
+                <a class="content__link" target="_blank" href="./recipebook/wildboar.html">Подробнее...</a>
+            </div>
+        </div>
+        <div class="recipe-box">
+            <div class="recipe-box__image">
+                <img class="photo" src="./images/recipes/soup.png" alt="Суп из лука-порея">
+            </div>
+            <div class="recipe-box__content content">
+                <h3>Суп из лука-порея</h3>
+                <p>Свадебное застолье открывал суп из порея, за ним следовал салат из зеленой фасоли, лука и свеклы</p>
+                <a class="content__link" target="_blank" href="./recipebook/soup.html">Подробнее...</a>
+            </div>
+        </div>
+        <div class="recipe-box">
+            <div class="recipe-box__image">
+                <img class="photo" src="./images/recipes/wine.jpg" alt="Сангрия Джоффри">
+            </div>
+            <div class="recipe-box__content content">
+                <h3>Сангрия Джоффри</h3>
+                <p>— У меня нет больше вина, — заявил Джоффри. — Как же мне выпить тост без вина? Услужи мне, дядя Бес. Раз уж ты не хочешь выступить на турнире, побудь моим чашником.</p>
+                <a class="content__link" target="_blank" href="./recipebook/wine.html">Подробнее...</a>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/dashboard.js"></script>
+    <script type="text/javascript" src="../vanilla-tilt.js"></script>
+    <script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll(".recipe-box"), {
+		max: 25,
+		speed: 400
+	});
+</script>
+</body>
+</html>
