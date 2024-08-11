@@ -102,6 +102,9 @@ const renderCard = () => {
     .then((characters) => {
       const character = characters.find((c) => c.name === myInput.value);
       if (character) {
+        //Split the name into first and last name
+        const [firstName, lastName] = character.name.split(" ");
+
         //Set the background image of the card container
         cardContainer.style.backgroundImage = `url(${character.photo})`;
         cardContainer.style.backgroundSize = "cover";
@@ -110,8 +113,8 @@ const renderCard = () => {
 
         //Create and display the card details
         cardContainer.innerHTML = `<div class="card">
-        <h2>${character.name}</h2>
-		<div class="character-details">
+        <h2><span class="first-name">${firstName}</span><span class="last-name">${lastName}</span></h2>
+		    <div class="character-details">
         <p>Титул: ${character.title}</p>
         <p>Причина смерти: ${character.causeOfDeath}</p>
         <p>Место смерти: ${character.placeOfDeath}</p>
