@@ -104,6 +104,7 @@ const renderCard = () => {
       if (character) {
         //Split the name into first and last name
         const [firstName, lastName] = character.name.split(" ");
+        const lastNameToDisplay = lastName !== undefined ? lastName : ""; //Handle undefined
 
         //Set the background image of the card container
         cardContainer.style.backgroundImage = `url(${character.photo})`;
@@ -113,7 +114,7 @@ const renderCard = () => {
 
         //Create and display the card details
         cardContainer.innerHTML = `<div class="card">
-        <h2><span class="first-name">${firstName}</span><span class="last-name">${lastName}</span></h2>
+        <h2><span class="first-name">${firstName}</span><span class="last-name">${lastNameToDisplay}</span></h2>
 		    <div class="character-details">
         <p><span class="label">Титул:</span><span class="value">${character.title}</span></p>
         <p><span class="label">Причина смерти:</span><span class="value">${character.causeOfDeath}</span></p>
