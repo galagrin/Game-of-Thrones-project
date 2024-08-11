@@ -185,11 +185,13 @@ h2 {
 .label {
   display: block;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .value {
   display: block;
   color: antiquewhite;
+  text-align: center;
 }
 
 /* КАРТОЧКА ГЕРОЯ */
