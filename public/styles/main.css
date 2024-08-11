@@ -16,10 +16,10 @@
 }
 
 body {
-	background-image: url('../images/iron-throne.jpg');
-	background-color: #333;
+	background-image: url('../images/mist-white-fog-wallpaper.jpg');
+	background-color: rgba(0, 0, 0, 0.4);
+	background-blend-mode: darken;
 	background-size: cover;
-	background-position: center;
 	color: antiquewhite;
 	max-width: 1920px;
 	margin: 0 auto;
@@ -35,18 +35,21 @@ h2 {
 	font-family: 'Trajan-Pro-3', sans-serif;
 }
 
-/* ПРОБА - ПОИСК */
+/* ПОИСК */
 .description {
 	margin-bottom: 2rem;
 	text-align: center;
 }
 
 .title {
-	position: relative;
-	z-index: 1;
+	font-size: 50px;
 	background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.description__text {
+	font-size: 30px;
 }
 
 .searchbar {
@@ -74,6 +77,10 @@ h2 {
 	border: 1px solid transparent;
 	border-bottom: 1px solid #575756;
 	border-radius: 0;
+}
+
+#myInput::placeholder {
+	color: #575756;
 }
 
 #myInput[type='text'] {
@@ -133,7 +140,51 @@ h2 {
 	z-index: 2;
 }
 
-/* ПРОБА - ПОИСК */
+#loading {
+	position: absolute;
+	top: 20rem;
+	left: 40%;
+	z-index: 99;
+	visibility: hidden;
+}
+
+#loading.display {
+	visibility: visible;
+}
+
+figure {
+	text-align: center;
+}
+
+.infiniteRotate {
+	width: 300px;
+	animation: infiniteRotateAnimation 1s linear infinite;
+	-webkit-animation: infiniteRotateAnimation 1s linear infinite;
+	-moz-animation: infiniteRotateAnimation 1s linear infinite;
+	-ms-animation: infiniteRotateAnimation 1s linear infinite;
+	-o-animation: infiniteRotateAnimation 1s linear infinite;
+}
+
+
+@keyframes infiniteRotateAnimation {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+/* ПОИСК */
 
 /* КАРТА И ЦИТАТЫ */
 #map-quote-section {
@@ -196,6 +247,8 @@ h2 {
 	padding: 20px;
 	position: relative;
 	color: #fff;
+	background-image: url('../images/iron-throne.jpg');
+	background-position: top center;
 }
 
 #card-container::before {

@@ -84,9 +84,11 @@ fetch('http://localhost:3000/api/characters')
 autocomplete(document.getElementById('myInput'), names);
 
 const cardContainer = document.getElementById('card-container');
+const loader = document.getElementById('loading');
 const searchButton = document.getElementById('search');
 
 const renderCard = () => {
+	loader.classList.add("display");
 	fetch('http://localhost:3000/api/characters')
 		.then(response => {
 			if (response.ok) {
@@ -114,10 +116,14 @@ const renderCard = () => {
         <p>Место смерти: ${character.placeOfDeath}</p>
         </div>`;
 			} else {
-				cardContainer.innerHTML = 'Персонаж не найден.';
+				cardContainer.innerHTML = `<p>Персонаж не найден</p>`;
+				cardContainer.style.backgroundImage = "url('/public/images/iron-throne.jpg')";
+				cardContainer.style.backgroundPosition = 'top center';
 			}
+		loader.classList.remove("display");	
 		})
 		.catch(error => {
+			loader.classList.remove("display");
 			cardContainer.textContent =
 				'Не удалось отобразить информацию: ' + error.message;
 		});
