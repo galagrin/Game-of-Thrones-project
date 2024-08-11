@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --index: calc(1vw + 1vh);
+}
+@font-face {
+    font-family: gotfont;
+    src: url(../fonts/game-of-thrones-kg25.ttf);
+}
+body {
+    font-family: gotfont;
+    color: #fff;
+    overflow-x: hidden;
+}
+.scene {
+    height: 550vh;
+}
+.layer {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-range: 0 300vh;
+}
+
+.layer:nth-child(1) {
+    animation-name: animation-1;
+}
+@keyframes animation-1 {
+    to {
+        scale: 1.2;
+    }
+}
+
+.layer:nth-child(2) {
+    animation-name: animation-2;
+}
+@keyframes animation-2 {
+    to {
+        scale: 1.275;
+    }
+}
+.layer:nth-child(3) {
+    animation-name: animation-3;
+}
+@keyframes animation-3 {
+    to {
+        scale: 1.5;
+    }
+}
+.layer:nth-child(4) {
+    animation-name: animation-4;
+}
+@keyframes animation-4 {
+    to {
+        scale: 2;
+    }
+}
+
+.layer:nth-child(5) {
+    opacity: 0;
+    animation-range: 200vh 250vh;
+    animation-name: animation-end;
+}
+@keyframes animation-end {
+    to {
+        opacity: 1;
+    }
+}
+
+.layer__content {
+    margin-left: 40px;
+    padding: 5vh 5vw;
+    backdrop-filter: blur(25px) brightness(0.98);
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-range: 0 100vh;
+    animation-name: animation-head;
+}
+@keyframes animation-head {
+    to {
+        opacity: 0;
+        filter: blur(25px);
+    }
+}
+.layer__content h1 {
+    text-transform: uppercase;
+    font-size: 60px;
+    text-align: center;
+    line-height: 0.9em;
+}
+.layer__end h3 {
+    font-size: 4rem;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.layer__end::before {
+    content: "";
+    background-image: url(../images/cutscreen/5.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    inset: 0;
+    position: absolute;
+    opacity: 0;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-range: 300vh 450vh;
+    animation-name: animation-bg;
+}
+@keyframes animation-bg {
+    to {
+        opacity: 1;
+    }
+}
+
+.layer:nth-child(6) {
+    opacity: 0;
+    animation-range: 250vh 300vh;
+    animation-name: animation-end;
+}
+@keyframes animation-end {
+    to {
+        opacity: 1;
+    }
+}
+.layer__link {
+    margin-top: 200px;
+}
+
+.layer__link a {
+    text-decoration: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.layer__link a:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Изменяем фон при наведении */
+}
