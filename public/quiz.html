@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина</title>
+    <link rel="stylesheet" href="./styles/quiz.css">
+</head>
+
+<body>
+    <h1>Викторина</h1>
+    <div class="quiz-container">
+        <h2>Игра престолов</h2>
+        <p id="question">Ваш вопрос появится здесь</p>
+        <img src="" alt="фото вопроса"id="question-image" width="500px">
+        <img src="" alt="фото результата" id="result-image" width="500px">
+        <div class="options">
+            <button id="option1" class="options button"></button>
+            <button id="option2" class="options button"></button>
+            <button id="option3" class="options button"></button>
+        </div>
+        
+        <button id="next-button">Далее</button>
+        <p id="result-text">result-text</p>
+        <button id="answer-button" onClick="refreshPage()">Пройти ещё раз</button>
+    </div>
+
+    <script src="./quiz.js"></script>
+</body>
+
+</html>
