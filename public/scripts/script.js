@@ -105,7 +105,7 @@ const renderCard = () => {
         //Set the background image of the card container
         cardContainer.style.backgroundImage = `url(${character.photo})`;
         cardContainer.style.backgroundSize = "cover";
-        cardContainer.style.backgroundPosition = "center";
+        cardContainer.style.backgroundPosition = "top center";
         cardContainer.style.backgroundRepeat = "no-repeat";
 
         //Create and display the card details
