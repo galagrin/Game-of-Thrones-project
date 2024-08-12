@@ -118,6 +118,7 @@ const answerButton = document.getElementById('answer-button');
 const resultText = document.getElementById('result-text');
 const resultImage = document.getElementById('result-image');
 const questionImage = document.getElementById('question-image');
+document.querySelector('.video-bg').playbackRate = 0.7;
 
 function startQuiz() {
   displayQuestion();
