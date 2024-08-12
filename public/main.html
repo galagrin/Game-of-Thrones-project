@@ -3,10 +3,14 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
+        <script src="./libs/swiper/swiper-bundle.min.js"></script>
+        <script src="./libs/particles/particles.js" defer></script>
         <link rel="stylesheet" href="./styles/normalize.css" />
         <link rel="stylesheet" href="./styles/main.css" />
         <title>Персонажи Игры престолов</title>
     </head>
+
     <body>
         <header></header>
         <main>
@@ -19,22 +23,46 @@
             </div>
             <!-- ОПИСАНИЕ - КОНЕЦ -->
 
-			<!-- ГАЛЕРЕЯ - КАРТЫ -->
-			<div class="deck-container">
-				<div class="deck__item"><img class="deck__img" src="./images/01.jpeg" alt=""></div>
-				<div class="deck__item"><img class="deck__img" src="./images/02.jpeg" alt=""></div>
-				<div class="deck__item"><img class="deck__img" src="./images/03.jpeg" alt=""></div>
-				<div class="deck__item"><img class="deck__img" src="./images/04.jpeg" alt=""></div>
-				<div class="deck__item"><img class="deck__img" src="./images/05.jpeg" alt=""></div>
-				<div class="deck__item"><img class="deck__img" src="./images/06.jpeg" alt=""></div>
-				<div class="deck__item"><img class="deck__img" src="./images/07.jpeg" alt=""></div>
-				<div class="deck__item"><img class="deck__img" src="./images/08.jpeg" alt=""></div>
-				<div class="deck__item"><img class="deck__img" src="./images/09.jpeg" alt=""></div>
-				<div class="deck__item"><img class="deck__img" src="./images/10.jpeg" alt=""></div>
-				<div class="deck__item"><img class="deck__img" src="./images/11.jpeg" alt=""></div>
-				<div class="deck__item"><img class="deck__img" src="./images/12.jpeg" alt=""></div>
-			</div>
-			<!-- ГАЛЕРЕЯ - КАРТЫ - КОНЕЦ -->
+            <!-- ГАЛЕРЕЯ - КАРТЫ -->
+            <div class="deck-container">
+                <div class="deck__item">
+                    <img class="deck__img" src="./images/01.jpeg" alt="" />
+                </div>
+                <div class="deck__item">
+                    <img class="deck__img" src="./images/02.jpeg" alt="" />
+                </div>
+                <div class="deck__item">
+                    <img class="deck__img" src="./images/03.jpeg" alt="" />
+                </div>
+                <div class="deck__item">
+                    <img class="deck__img" src="./images/04.jpeg" alt="" />
+                </div>
+                <div class="deck__item">
+                    <img class="deck__img" src="./images/05.jpeg" alt="" />
+                </div>
+                <div class="deck__item">
+                    <img class="deck__img" src="./images/06.jpeg" alt="" />
+                </div>
+                <div class="deck__item">
+                    <img class="deck__img" src="./images/07.jpeg" alt="" />
+                </div>
+                <div class="deck__item">
+                    <img class="deck__img" src="./images/08.jpeg" alt="" />
+                </div>
+                <div class="deck__item">
+                    <img class="deck__img" src="./images/09.jpeg" alt="" />
+                </div>
+                <div class="deck__item">
+                    <img class="deck__img" src="./images/10.jpeg" alt="" />
+                </div>
+                <div class="deck__item">
+                    <img class="deck__img" src="./images/11.jpeg" alt="" />
+                </div>
+                <div class="deck__item">
+                    <img class="deck__img" src="./images/12.jpeg" alt="" />
+                </div>
+            </div>
+            <!-- ГАЛЕРЕЯ - КАРТЫ - КОНЕЦ -->
 
             <!-- ПОИСК -->
             <form class="searchbar" autocomplete="off">
@@ -47,21 +75,359 @@
                     />
                 </div>
                 <button type="button" id="search">Искать</button>
-				<div id="loading">
-					<figure>
-						<img src="./images/targaryen-logo_antique.png" alt="" class="infiniteRotate" />
-					</figure>
-				</div>
+                <div id="loading">
+                    <figure>
+                        <img
+                            src="./images/targaryen-logo_antique.png"
+                            alt=""
+                            class="infiniteRotate"
+                        />
+                    </figure>
+                </div>
             </form>
             <section id="card-container"></section>
-			<figure>
-				<img src="./images/targaryen-logo_antique.png" alt="" class="autoRotate">
-			</figure>
+            <figure>
+                <img
+                    src="./images/targaryen-logo_antique.png"
+                    alt=""
+                    class="autoRotate"
+                />
+            </figure>
             <!-- ПОИСК - КОНЕЦ -->
 
-            <!-- ГАЛЕРЕЯ -->
-            <section class="gallery"></section>
-            <!-- ГАЛЕРЕЯ КОНЕЦ -->
+            <!-- ГАЛЕРЕЯ ФОТОГРАФИЙ-->
+            <section class="gallery">
+                <div class="swiper slider">
+                    <div class="swiper-wrapper slider__wrapper">
+                        <div class="swiper-slide slider__item">
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="35%"
+                                style="
+                                    background-image: url(./galleryImages/nightking3.webp);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="25%"
+                                style="
+                                    background-image: url(./galleryImages/nightking2.webp);
+                                "
+                            ></div>
+                            <canvas
+                                class="particles slider__layer"
+                                data-swiper-parallax="18%"
+                                data-color="#BE9164"
+                            ></canvas>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="14%"
+                                style="
+                                    background-image: url(./galleryImages/nightking1.webp);
+                                "
+                            ></div>
+                            <canvas
+                                class="particles slider__layer"
+                                data-swiper-parallax="25%"
+                                data-color="#D5BDB4"
+                            ></canvas>
+                        </div>
+
+                        <div class="swiper-slide slider__item">
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="35%"
+                                style="
+                                    background-image: url(./galleryImages/dianeris3.jpg);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="30%"
+                                style="
+                                    background-image: url(./galleryImages/dianeris2.png);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="25%"
+                                style="
+                                    background-image: url(./galleryImages/dianeris1.webp);
+                                "
+                            ></div>
+                            <canvas
+                                class="particles slider__layer"
+                                data-swiper-parallax="25%"
+                                data-color="#A7B1BA"
+                            ></canvas>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="14%"
+                                style="
+                                    background-image: url(./galleryImages/layer-front.png);
+                                "
+                            ></div>
+                        </div>
+
+                        <div class="swiper-slide slider__item">
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="35%"
+                                style="
+                                    background-image: url(./galleryImages/stark3.jpg);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="25%"
+                                style="
+                                    background-image: url(./galleryImages/stark2.webp);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="20%"
+                                style="
+                                    background-image: url(./galleryImages/stark1.webp);
+                                "
+                            ></div>
+                            <canvas
+                                class="particles slider__layer"
+                                data-swiper-parallax="25%"
+                                data-color="#D4E4EC"
+                            ></canvas>
+                        </div>
+
+                        <div class="swiper-slide slider__item">
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="35%"
+                                style="
+                                    background-image: url(./galleryImages/khalisi3.webp);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="25%"
+                                style="
+                                    background-image: url(./galleryImages/khalisi2.webp);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="20%"
+                                style="
+                                    background-image: url(./galleryImages/khalisi1.webp);
+                                "
+                            ></div>
+                            <canvas
+                                class="particles slider__layer"
+                                data-swiper-parallax="25%"
+                                data-color="#BF7F37"
+                            ></canvas>
+                        </div>
+
+                        <div class="swiper-slide slider__item">
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="45%"
+                                style="
+                                    background-image: url(./galleryImages/dragonSnow4.webp);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="25%"
+                                style="
+                                    background-image: url(./galleryImages/dragonSnow3.webp);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="20%"
+                                style="
+                                    background-image: url(./galleryImages/dragonSnow2.webp);
+                                "
+                            ></div>
+                            <canvas
+                                class="particles slider__layer"
+                                data-swiper-parallax="25%"
+                                data-color="#D4E4EC"
+                            ></canvas>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="16%"
+                                style="
+                                    background-image: url(./galleryImages/dragonSnow1.png);
+                                "
+                            ></div>
+                        </div>
+
+                        <div class="swiper-slide slider__item">
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="30%"
+                                style="
+                                    background-image: url(./galleryImages/cercea2.webp);
+                                "
+                            ></div>
+                            <canvas
+                                class="particles slider__layer"
+                                data-swiper-parallax="25%"
+                                data-color="#0D0C0A"
+                            ></canvas>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="18%"
+                                style="
+                                    background-image: url(./galleryImages/cercea1.webp);
+                                "
+                            ></div>
+                        </div>
+
+                        <div class="swiper-slide slider__item">
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="40%"
+                                style="
+                                    background-image: url(./galleryImages/arya4.webp);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="30%"
+                                style="
+                                    background-image: url(./galleryImages/arya3.webp);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="25%"
+                                style="
+                                    background-image: url(./galleryImages/arya2.webp);
+                                "
+                            ></div>
+                            <canvas
+                                class="particles slider__layer"
+                                data-swiper-parallax="25%"
+                                data-color="#413F3F"
+                            ></canvas>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="18%"
+                                style="
+                                    background-image: url(./galleryImages/arya1.webp);
+                                "
+                            ></div>
+                        </div>
+
+                        <div class="swiper-slide slider__item">
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="37%"
+                                style="
+                                    background-image: url(./galleryImages/dany4.webp);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="35%"
+                                style="
+                                    background-image: url(./galleryImages/dany3.webp);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="25%"
+                                style="
+                                    background-image: url(./galleryImages/dany2.webp);
+                                "
+                            ></div>
+                            <canvas
+                                class="particles slider__layer"
+                                data-swiper-parallax="25%"
+                                data-color="#2B362A"
+                            ></canvas>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="18%"
+                                style="
+                                    background-image: url(./galleryImages/dany1.webp);
+                                "
+                            ></div>
+                        </div>
+
+                        <div class="swiper-slide slider__item">
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="35%"
+                                style="
+                                    background-image: url(./galleryImages/johndany3.webp);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="25%"
+                                style="
+                                    background-image: url(./galleryImages/johndany2.webp);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="18%"
+                                style="
+                                    background-image: url(./galleryImages/johndany1.webp);
+                                "
+                            ></div>
+                            <canvas
+                                class="particles slider__layer"
+                                data-swiper-parallax="25%"
+                                data-color="#82667F"
+                            ></canvas>
+                        </div>
+
+                        <div class="swiper-slide slider__item">
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="40%"
+                                style="
+                                    background-image: url(./galleryImages/got4.jpg);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="30%"
+                                style="
+                                    background-image: url(./galleryImages/got3.webp);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="25%"
+                                style="
+                                    background-image: url(./galleryImages/got2.webp);
+                                "
+                            ></div>
+                            <div
+                                class="slider__layer"
+                                data-swiper-parallax="18%"
+                                style="
+                                    background-image: url(./galleryImages/got1.webp);
+                                "
+                            ></div>
+                            <canvas
+                                class="particles slider__layer"
+                                data-swiper-parallax="25%"
+                                data-color="#DBDBDC"
+                            ></canvas>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </section>
+            <!-- ГАЛЕРЕЯ ФОТОГРАФИЙ КОНЕЦ -->
 
             <!-- КАРТА И ЦИТАТЫ -->
             <section id="map-quote-section">
