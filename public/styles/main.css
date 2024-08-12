@@ -49,6 +49,7 @@ h2 {
         #ffecb3 40%,
         #3a2c0f 78%
     );
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -426,3 +427,144 @@ figure {
 }
 
 /* ГАЛЕРЕЯ ФОТОГРАФИЙ */
+
+/* СЕКЦИЯ РЕЦЕПТОВ */
+
+.recipes{
+    display: flex;
+    position: relative;
+    margin: 50px auto;
+    transform-style: preserve-3d;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 70%;
+}
+.recipes .recipe-box{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+}
+.recipes.recipe-box:hover{
+    box-shadow: 0 50px 80px rgba(0,0,0,0.2);
+}
+.recipes .recipe-box .recipe-box__image{
+    position: absolute;
+}
+.recipes .recipe-box .recipe-box__content{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
+    transform: translateZ(20px) scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+    transform-style: preserve-3d;
+    padding: 20px 5px;
+}
+.content__title{
+    font-family: "Game-of-Thrones", "san-serif";
+    font-size: 26px;
+    margin: 25px 10px;
+    background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.recipes .recipe-box:hover .recipe-box__content{
+    transform: translateZ(30px) scaleY(1);
+}
+.title_font{
+    background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #795b20 78%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 20px;
+    text-align: center;
+}
+.content__link{
+    background: linear-gradient(to bottom, #cfc09f 27%, #dbb238 40%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.box__photo{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #795b20;
+}
+/* СЕКЦИЯ РЕЦЕПТОВ */
+
+/* СТРАНИЧКА КОНКРЕТНОГО РЕЦЕПТА */
+
+.recipe{
+    display: flex;
+    width: 80%;
+    margin: 50px auto;
+    flex-direction: column;
+}
+.recipe__quotation{
+    text-align: center;
+    font-style: italic;
+    padding: 40px;
+    border-radius: 40px;
+    border: 1px solid #3a2c0f;
+}
+.recipe__quotation-name{
+   text-align: end;
+   margin-top: 20px;
+}
+.recipe__container{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+.recipe__container-block{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    flex-basis: 40%;
+    justify-content: space-evenly;
+}
+.recipe__container-image{
+    flex-basis: 60%;
+}
+.recipe__timing{
+    color:#d3b87d;
+    font-weight: 900;
+    
+}
+.recipe__info{
+    margin-top: 60px;
+    text-align: center;
+}
+.recipe__ingredients{
+    margin-top: 40px;
+    text-align: start;
+    color:#ffecb3;
+    padding: 10px;
+    border-top: 1px solid #ffecb3;
+    border-bottom: 1px solid #ffecb3;
+}
+.recipe__text{
+    text-align: center;
+    margin-top: 40px;
+}
+.recipe-photo{
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+}
+li{
+    list-style-type: "- ";
+}
+
+/* СТРАНИЧКА КОНКРЕТНОГО РЕЦЕПТА */
