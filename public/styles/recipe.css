@@ -8,11 +8,11 @@
 
 @font-face {
   font-family: "Game-of-Thrones";
-  src: url(./fonts/game-of-thrones-kg25.ttf);
+  src: url(../fonts/game-of-thrones-kg25.ttf);
 }
 @font-face {
   font-family: "Trajan-Pro-3";
-  src: url(./fonts/Trajan-Pro-3-Regular.otf);
+  src: url(../fonts/Trajan-Pro-3-Regular.otf);
 }
 body {
     background-image: url("../images/mist-white-fog-wallpaper.jpg");
@@ -32,12 +32,14 @@ h2{
 }
 h3{
     background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 5px;
 }
 .title {
     background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -50,6 +52,7 @@ h3{
 }
 .content__link{
     background: linear-gradient(to bottom, #cfc09f 27%, #dbb238 40%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -108,12 +111,12 @@ h3{
 
 
 /* //СТРАНИЧКА КОНКРЕТНОГО РЕЦЕПТА */
+
 .recipe{
     display: flex;
     width: 80%;
-    margin: 20px auto;
+    margin: 50px auto;
     flex-direction: column;
-    padding: 20px;
 }
 .recipe__quotation{
     text-align: center;
@@ -129,7 +132,6 @@ h3{
 .recipe__container{
     display: flex;
     margin-top: 30px;
-    flex-wrap: wrap;
     justify-content: center;
 }
 .recipe__container-block{
@@ -137,27 +139,28 @@ h3{
     flex-direction: column;
     text-align: center;
     padding: 10px;
-    width: 40%;
-    justify-content: center;
+    flex-basis: 40%;
+    justify-content: space-evenly;
 }
 .recipe__container-image{
-    width: 60%;
+    flex-basis: 60%;
 }
 .recipe__timing{
-    color:#3a2c0f;
+    color:#cfc09f;
     font-weight: 900;
     
 }
 .recipe__info{
     margin-top: 60px;
+    text-align: center;
 }
 .recipe__ingredients{
     margin-top: 40px;
     text-align: start;
-    color:#3a2c0f;
+    color:#ffecb3;
     padding: 10px;
-    border-top: 1px solid #3a2c0f;
-    border-bottom: 1px solid #3a2c0f;
+    border-top: 1px solid #ffecb3;
+    border-bottom: 1px solid #ffecb3;
 }
 .recipe__text{
     text-align: center;
