@@ -17,10 +17,9 @@
 }
 
 body {
-    background-image: url("../images/mist-white-fog-wallpaper.jpg");
+    background-image: url("../images/mist-white-fog-wallpaper_mirror.png");
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: darken;
-    background-size: cover;
     color: antiquewhite;
     max-width: 1920px;
     margin: 0 auto;
@@ -44,10 +43,7 @@ h2 {
 
 .title {
     font-size: 50px;
-    background: linear-gradient(to bottom,
-            #cfc09f 27%,
-            #ffecb3 40%,
-            #3a2c0f 78%);
+    background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -124,10 +120,7 @@ h2 {
     cursor: pointer;
     border-radius: 50px;
     border: none;
-    background: linear-gradient(to right,
-            #cfc09f 0%,
-            #ffecb3 51%,
-            #3a2c0f 100%);
+    background: linear-gradient(to right, #cfc09f 0%, #ffecb3 51%, #3a2c0f 100%);
     transition: 0.5s;
     background-size: 200% auto;
 }
@@ -201,6 +194,21 @@ h2 {
     display: block;
     color: antiquewhite;
     text-align: center;
+}
+
+.character-not-found-container {
+    position: absolute;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 10rem;
+    height: 100%;
+    width: 100%;
+}
+
+.character-not-found {
+    text-align: center;
+    font-size: 3rem;
 }
 
 /* КАРТОЧКА ГЕРОЯ */
@@ -504,10 +512,7 @@ figure {
 }
 
 .title_font {
-    background: linear-gradient(to bottom,
-            #cfc09f 27%,
-            #ffecb3 40%,
-            #795b20 78%);
+    background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #795b20 78%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -607,4 +612,26 @@ li {
     list-style-type: "- ";
 }
 
+/* звездочки */
+.card_stars {
+    max-width: 15rem;
+    /* background: #fff; */
+    margin: 0 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    border-radius: 0.5rem;
+}
+
+.rating-star {
+    color: #ccc;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.rating-star.active {
+    color: #ffecb3;
+}
+
+/* звездочки */
 /* СТРАНИЧКА КОНКРЕТНОГО РЕЦЕПТА */
