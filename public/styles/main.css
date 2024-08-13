@@ -10,6 +10,7 @@
     font-family: "Game-of-Thrones";
     src: url(../fonts/game-of-thrones-kg25.ttf);
 }
+
 @font-face {
     font-family: "Trajan-Pro-3";
     src: url(../fonts/Trajan-Pro-3-Regular.otf);
@@ -43,12 +44,10 @@ h2 {
 
 .title {
     font-size: 50px;
-    background: linear-gradient(
-        to bottom,
-        #cfc09f 27%,
-        #ffecb3 40%,
-        #3a2c0f 78%
-    );
+    background: linear-gradient(to bottom,
+            #cfc09f 27%,
+            #ffecb3 40%,
+            #3a2c0f 78%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -125,12 +124,10 @@ h2 {
     cursor: pointer;
     border-radius: 50px;
     border: none;
-    background: linear-gradient(
-        to right,
-        #cfc09f 0%,
-        #ffecb3 51%,
-        #3a2c0f 100%
-    );
+    background: linear-gradient(to right,
+            #cfc09f 0%,
+            #ffecb3 51%,
+            #3a2c0f 100%);
     transition: 0.5s;
     background-size: 200% auto;
 }
@@ -191,6 +188,7 @@ h2 {
     align-items: center;
     font-size: 1.5rem;
     margin-top: auto;
+    gap: 2rem;
 }
 
 .label {
@@ -282,7 +280,8 @@ figure {
 #map-container {
     flex: 1;
     height: 400px;
-    background-color: #f0f0f035; /* фон для видимости будущей карты */
+    background-color: #f0f0f035;
+    /* фон для видимости будущей карты */
     border-radius: 8px;
 }
 
@@ -321,6 +320,7 @@ figure {
     color: #555;
     text-align: right;
 }
+
 /* ЦИТАТЫ */
 
 /* ГАЛЕРЕЯ - КАРТЫ */
@@ -348,17 +348,17 @@ figure {
     transform: translateZ(200px);
 }
 
-.deck-container .deck__item:hover + * {
+.deck-container .deck__item:hover+* {
     filter: opacity(0.6);
     transform: translateZ(150px) rotateY(40deg);
 }
 
-.deck-container .deck__item:hover + * + * {
+.deck-container .deck__item:hover+*+* {
     filter: opacity(0.4);
     transform: translateZ(70px) rotateY(20deg);
 }
 
-.deck-container .deck__item:hover + * + * + * {
+.deck-container .deck__item:hover+*+*+* {
     filter: opacity(0.2);
     transform: translateZ(30px) rotateY(10deg);
 }
@@ -396,6 +396,7 @@ figure {
 :root {
     --transition: 1.75s cubic-bezier(0.2, 0.6, 0, 1);
 }
+
 .gallery {
     height: 50vh;
     margin: 2rem 0;
@@ -404,6 +405,7 @@ figure {
     align-items: center;
     justify-content: center;
 }
+
 .slider {
     height: 100%;
     width: 63%;
@@ -417,6 +419,7 @@ figure {
     will-change: transform;
     transition: var(--transition) !important;
 }
+
 .slider__layer::before {
     content: "";
     position: absolute;
@@ -424,6 +427,7 @@ figure {
     z-index: 1;
     box-shadow: inset 0 0 250px rgb(0 0 0 / 0.3);
 }
+
 .slider__item {
     overflow: hidden;
 }
@@ -433,6 +437,7 @@ figure {
     transform-style: preserve-3d;
     transition: var(--transition) !important;
 }
+
 .swiper-button-next,
 .swiper-button-prev {
     color: #fff6f6;
@@ -451,6 +456,7 @@ figure {
     justify-content: space-evenly;
     width: 70%;
 }
+
 .recipes .recipe-box {
     position: relative;
     width: 300px;
@@ -458,12 +464,15 @@ figure {
     margin: 0 auto;
     transform-style: preserve-3d;
 }
+
 .recipes.recipe-box:hover {
     box-shadow: 0 50px 80px rgba(0, 0, 0, 0.2);
 }
+
 .recipes .recipe-box .recipe-box__image {
     position: absolute;
 }
+
 .recipes .recipe-box .recipe-box__content {
     position: absolute;
     width: 300px;
@@ -479,6 +488,7 @@ figure {
     transform-style: preserve-3d;
     padding: 20px 5px;
 }
+
 .content__title {
     font-family: "Game-of-Thrones", "san-serif";
     font-size: 26px;
@@ -488,28 +498,30 @@ figure {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .recipes .recipe-box:hover .recipe-box__content {
     transform: translateZ(30px) scaleY(1);
 }
+
 .title_font {
-    background: linear-gradient(
-        to bottom,
-        #cfc09f 27%,
-        #ffecb3 40%,
-        #795b20 78%
-    );
+    background: linear-gradient(to bottom,
+            #cfc09f 27%,
+            #ffecb3 40%,
+            #795b20 78%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 20px;
     text-align: center;
 }
+
 .content__link {
     background: linear-gradient(to bottom, #cfc09f 27%, #dbb238 40%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .box__photo {
     width: 100%;
     height: 100%;
@@ -517,6 +529,7 @@ figure {
     padding: 10px;
     border: 1px solid #795b20;
 }
+
 /* СЕКЦИЯ РЕЦЕПТОВ */
 
 /* СТРАНИЧКА КОНКРЕТНОГО РЕЦЕПТА */
@@ -527,6 +540,7 @@ figure {
     margin: 50px auto;
     flex-direction: column;
 }
+
 .recipe__quotation {
     text-align: center;
     font-style: italic;
@@ -534,15 +548,18 @@ figure {
     border-radius: 40px;
     border: 1px solid #3a2c0f;
 }
+
 .recipe__quotation-name {
     text-align: end;
     margin-top: 20px;
 }
+
 .recipe__container {
     display: flex;
     margin-top: 30px;
     justify-content: center;
 }
+
 .recipe__container-block {
     display: flex;
     flex-direction: column;
@@ -551,17 +568,21 @@ figure {
     flex-basis: 40%;
     justify-content: space-evenly;
 }
+
 .recipe__container-image {
     flex-basis: 60%;
 }
+
 .recipe__timing {
     color: #d3b87d;
     font-weight: 900;
 }
+
 .recipe__info {
     margin-top: 60px;
     text-align: center;
 }
+
 .recipe__ingredients {
     margin-top: 40px;
     text-align: start;
@@ -570,15 +591,18 @@ figure {
     border-top: 1px solid #ffecb3;
     border-bottom: 1px solid #ffecb3;
 }
+
 .recipe__text {
     text-align: center;
     margin-top: 40px;
 }
+
 .recipe-photo {
     width: 100%;
     border-radius: 20px;
     padding: 10px;
 }
+
 li {
     list-style-type: "- ";
 }
