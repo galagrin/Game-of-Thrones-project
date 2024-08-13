@@ -517,6 +517,28 @@ figure {
     padding: 10px;
     border: 1px solid #795b20;
 }
+
+/* звездочки */
+.card_stars {
+    max-width: 15rem;
+    /* background: #fff; */
+    margin: 0 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    border-radius: 0.5rem;
+} 
+
+    .rating-star {
+        color: #ccc;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    
+    .rating-star.active {
+        color:  #ffecb3;
+    }
+/* звездочки */
 /* СЕКЦИЯ РЕЦЕПТОВ */
 
 /* СТРАНИЧКА КОНКРЕТНОГО РЕЦЕПТА */
