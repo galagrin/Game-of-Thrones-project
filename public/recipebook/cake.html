@@ -14,7 +14,7 @@
             <p class="recipe__quotation-name">«ИГРА ПРЕСТОЛОВ»</p>
         </div>
         <div class="recipe__container">
-            <div class="recipe__container-block">
+            <div class="recipe__container-block autoBlur">
                 <div class="recipe__timing">
                     <p>45–60 мини-пирожных</p>
                     <p>Подготовка: 20 минут</p>
@@ -28,21 +28,21 @@
             <div class="recipe__container-image">
                 <img class="recipe-photo" src="../images/recipes/cake.png" alt="Лимонные пирожные">
             </div>
-            <div class="rating card_stars">
-                <h2>
-                    Оцените рецепт
-                </h2>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <h3 id="output">
-                    Ваша оценка: 0/5
-                </h3>
-            </div>
         </div>
-        <div class="recipe__ingredients">
+        <div class="rating card_stars autoShow">
+            <h2>
+                Оцените рецепт
+            </h2>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <h3 id="output">
+                Ваша оценка: 0/5
+            </h3>
+        </div>
+        <div class="recipe__ingredients autoShow">
             <ul>
                 <li>2 ½ стакана муки</li>
                 <li>1 ½ ч. л. разрыхлителя</li>
@@ -60,7 +60,20 @@
                 <li>1 ч. л. размягченного сливочного масла</li>
             </ul>
         </div>
-        <div class="recipe__text">
+        <div class="poison-box">
+            <figure>
+                <p class="autoShow"><span style="color: #ffecb3;">Оленна Тирелл</span> рекомендует:</p>
+                <img
+                    src="../images/icons8-зелье-64.png"
+                    alt=""
+                    class="autoRotatePoison"
+                />
+            </figure>
+            <div class="grand autoBlur">
+                <img class="grand__img" src="../images/tirell.png" alt="Оленна Тирелл">
+            </div>
+        </div>
+        <div class="recipe__text autoShow">
             Разогрейте духовку до 175 °C. Смажьте маслом дно формы со сторонами 28 × 8 см,
             застелите куском пергаментной бумаги, снова смажьте маслом и  присыпьте мукой,
             стряхнув излишки.
@@ -76,6 +89,14 @@
             пор, пока не образуется красивая однородная глазурь.
         </div>
     </section>
+    <!-- разделитель -->
+    <div class="divider divider_margin">
+        <img
+            src="../images/dragon-divider_antique.png"
+            alt="разделитель в виде дракона"
+        />
+    </div>
+    <!-- разделитель конец-->
     <script src="../scripts/recipescript.js"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@
             <p class="recipe__quotation-name">«БИТВА КОРОЛЕЙ»</p>
         </div>
         <div class="recipe__container">
-            <div class="recipe__container-block">
+            <div class="recipe__container-block autoBlur">
                 <div class="recipe__timing">
                     <p>4 - 6 порций</p>
                     <p>Подготовка: 20 минут</p>
@@ -28,21 +28,21 @@
             <div class="recipe__container-image">
                 <img class="recipe-photo" src="../images/recipes/bull.png" alt="Дикий бык, запеченный с пореем">
             </div>
-            <div class="rating card_stars">
-                <h2>
-                    Оцените рецепт
-                </h2>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <h3 id="output">
-                    Ваша оценка: 0/5
-                </h3>
-            </div>
         </div>
-        <div class="recipe__ingredients">
+        <div class="rating card_stars autoShow">
+            <h2>
+                Оцените рецепт
+            </h2>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <h3 id="output">
+                Ваша оценка: 0/5
+            </h3>
+        </div>
+        <div class="recipe__ingredients autoShow">
             <ul>
                 <li>1,4 кг мякоти дичи куском (бизон, лось) или говяжьей вырезки</li>
                 <li>6 стеблей лука-порея (только белая и светло-зеленая части), промытых и нарезанных кольцами толщиной ½ см</li>
@@ -54,7 +54,20 @@
                 <li>бульон или вода (могут понадобиться для поливания)</li>
             </ul>
         </div>
-        <div class="recipe__text">
+        <div class="poison-box">
+            <figure>
+                <p class="autoShow"><span style="color: #ffecb3;">Оленна Тирелл</span> рекомендует:</p>
+                <img
+                    src="../images/icons8-зелье-64.png"
+                    alt=""
+                    class="autoRotatePoison"
+                />
+            </figure>
+            <div class="grand autoBlur">
+                <img class="grand__img" src="../images/tirell.png" alt="Оленна Тирелл">
+            </div>
+        </div>
+        <div class="recipe__text autoShow">
             Разогрейте духовку до 200 °C и выньте мясо из холодильника за 30 минут до приготовления.
             Выложите овощи, чеснок и зелень на глубокий противень и сбрызните оливковым
             маслом. Перемешайте, чтобы все покрылось маслом. Мясо сбрызните оливковым маслом,
@@ -67,6 +80,14 @@
             Когда мясо прожарится до нужной готовности, переложите его на разделочную доску и дайте постоять 15 минут. Затем нарежьте ломтиками и подавайте, полив соусом, с овощами.
         </div>
     </section>
+    <!-- разделитель -->
+    <div class="divider divider_margin">
+        <img
+            src="../images/dragon-divider_antique.png"
+            alt="разделитель в виде дракона"
+        />
+    </div>
+        <!-- разделитель конец-->
     <script src="../scripts/recipescript.js"></script>
 </body>
 </html>

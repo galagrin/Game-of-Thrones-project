@@ -14,7 +14,7 @@
             <p class="recipe__quotation-name">«БУРЯ МЕЧЕЙ»</p>
         </div>
         <div class="recipe__container">
-            <div class="recipe__container-block">
+            <div class="recipe__container-block autoBlur">
                 <div class="recipe__timing">
                     <p>2 порции</p>
                     <p>Подготовка: 20 минут</p>
@@ -30,21 +30,21 @@
             <div class="recipe__container-image">
                 <img class="recipe-photo" src="../images/recipes/wildboar.png" alt="Запеченное мясо кабана">
             </div>
-            <div class="rating card_stars">
-                <h2>
-                    Оцените рецепт
-                </h2>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <h3 id="output">
-                    Ваша оценка: 0/5
-                </h3>
-            </div>
         </div>
-        <div class="recipe__ingredients">
+        <div class="rating card_stars autoShow">
+            <h2>
+                Оцените рецепт
+            </h2>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <h3 id="output">
+                Ваша оценка: 0/5
+            </h3>
+        </div>
+        <div class="recipe__ingredients autoShow">
             <ul>
                 <li>4 куска вырезки кабана, по 110 – 120 г каждый</li>
                 <li>¼ стакана красного вина, например риохи или шираза</li>
@@ -53,7 +53,20 @@
                 <li>12–20 бутонов гвоздики</li>
             </ul>
         </div>
-        <div class="recipe__text">
+        <div class="poison-box">
+            <figure>
+                <p class="autoShow"><span style="color: #ffecb3;">Оленна Тирелл</span> рекомендует:</p>
+                <img
+                    src="../images/icons8-зелье-64.png"
+                    alt=""
+                    class="autoRotatePoison"
+                />
+            </figure>
+            <div class="grand autoBlur">
+                <img class="grand__img" src="../images/tirell.png" alt="Оленна Тирелл">
+            </div>
+        </div>
+        <div class="recipe__text autoShow">
             Мякоть кабана поместите в полиэтиленовый зиплок-пакет с застежкой или выложите в форму для запекания. Смешайте вино, уксус и сок с 1 ч. л. «крепкого порошка»
             и полейте этим маринадом мясо. Дайте промариноваться от 1 часа при комнатной температуре до 12 часов в холодильнике.
             Разогрейте духовку до 175 °C.
@@ -65,7 +78,14 @@
             Варите соус на слабом огне 10–15 минут. Полейте мясо кабана соусом и подавайте.
         </div>
     </section>
-
+    <!-- разделитель -->
+    <div class="divider divider_margin">
+        <img
+            src="../images/dragon-divider_antique.png"
+            alt="разделитель в виде дракона"
+        />
+    </div>
+    <!-- разделитель конец-->
     <script src="../scripts/recipescript.js"></script>
 </body>
 </html>
