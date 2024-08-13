@@ -17,20 +17,7 @@
             <div class="recipe__container-image">
                 <img class="recipe-photo" src="../images/recipes/pie.webp" alt="Пирог с голубиным мясом">
             </div>
-            <div class="rating card_stars">
-                <h2>
-                    Оцените рецепт
-                </h2>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <span class="rating-star">&#9733;</span>
-                <h3 id="output">
-                    Ваша оценка: 0/5
-                </h3>
-            </div>
-            <div class="recipe__container-block">
+            <div class="recipe__container-block autoBlur">
                 <div class="recipe__timing">
                     <p>6–8 порций</p>
                     <p>Подготовка: 1 час 30 минут</p>
@@ -41,7 +28,20 @@
                 </div>
             </div>
         </div>
-        <div class="recipe__ingredients">
+        <div class="rating card_stars autoShow">
+            <h2>
+                Оцените рецепт
+            </h2>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <h3 id="output">
+                Ваша оценка: 0/5
+            </h3>
+        </div>
+        <div class="recipe__ingredients autoShow">
             <ul>
                 <li>5 голубей, промытых и разделанных</li>
                 <li> несколько бутонов гвоздики </li>
@@ -57,7 +57,20 @@
                 <li> 650 г готового теста, раскатанного в 2 лепешки</li>
             </ul>
         </div>
-        <div class="recipe__text">
+    <div class="poison-box">
+        <figure>
+            <p class="autoShow"><span style="color: #ffecb3;">Оленна Тирелл</span> рекомендует:</p>
+            <img
+                src="../images/icons8-зелье-64.png"
+                alt=""
+                class="autoRotatePoison"
+            />
+        </figure>
+        <div class="grand autoBlur">
+            <img class="grand__img" src="../images/tirell.png" alt="Оленна Тирелл">
+        </div>
+    </div>
+        <div class="recipe__text autoShow">
             Тушки голубей уложите в глубокую кастрюлю и залейте горячей водой, чтобы только закрывала их. Добавьте в воду гвоздику и варите на слабом огне 45 минут. Затем
             выньте мясо, сохранив бульон. У вареных грудок отделите мясо от костей. Нарежьте его
             тонкими полосками и отложите. В остальных частях разделанной тушки мяса так мало,
@@ -73,6 +86,14 @@
             корочки.
         </div>
     </section>
+    <!-- разделитель -->
+        <div class="divider divider_margin">
+            <img
+                src="../images/dragon-divider_antique.png"
+                alt="разделитель в виде дракона"
+            />
+        </div>
+        <!-- разделитель конец-->
     <script src="../scripts/recipescript.js"></script>
 </body>
 </html>
