@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Эддард Старк",
         "title": "Лорд-хранитель Севера",
-        "causeOfDeath": "Казнён через обезглавливание",
+        "causeOfDeath": "Умер, пытаясь доказать, что честь дороже головы. Голова не согласилась",
         "placeOfDeath": "Королевская Гавань",
         "photo": "https://wallpaper.forfun.com/fetch/3e/3ec1d112b56a05dc948f593ec42ecee6.jpeg?w=1470&r=0.5625"
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "name": "Робб Старк",
         "title": "Король Севера",
-        "causeOfDeath": "Убит на Красной свадьбе",
+        "causeOfDeath": "Попал на самую кровавую свадьбу Вестероса, где тосты оказались слишком острыми",
         "placeOfDeath": "Близнецы",
         "photo": "https://wallpaper.forfun.com/fetch/52/5217b27df0873193bc41bbca92d61d97.jpeg?w=1470&r=0.5625"
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "name": "Кейтлин Старк",
         "title": "Леди Винтерфелла",
-        "causeOfDeath": "Убита на Красной свадьбе",
+        "causeOfDeath": "Погибла, когда зашла слишком далеко в споре с Лизой Аррен о том, кто из них лучше варит суп",
         "placeOfDeath": "Близнецы",
         "photo": "https://wallpaper.forfun.com/fetch/d6/d6a4cd77cafa25ed95978ba0692bb8af.jpeg?w=1470&r=0.5625"
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "name": "Джофри Баратеон",
         "title": "Король Андалов и Первых Людей",
-        "causeOfDeath": "Отравлен на свадьбе",
+        "causeOfDeath": "Отравился на своей свадьбе, запив пирожное ядовитым вином",
         "placeOfDeath": "Королевская Гавань",
         "photo": "https://wallpaper.forfun.com/fetch/e4/e4027f1a988a8a3f04bd1eeecac7b9b5.jpeg?w=1470&r=0.5625"
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "name": "Кхал Дрого",
         "title": "Кхал дотракийцев",
-        "causeOfDeath": "Инфекция и эвтаназия",
+        "causeOfDeath": "Умер от раны и ведьминского зелья, не выдержав атаки на свое здоровье",
         "placeOfDeath": "Дотракийское море",
         "photo": "https://wallpaper.forfun.com/fetch/15/157a8a041e5028b78317b6f96cdad4ba.jpeg?w=1470&r=0.5625"
     },
@@ -43,7 +43,7 @@
         "id": 6,
         "name": "Тайвин Ланнистер",
         "title": "Десница короля",
-        "causeOfDeath": "Застрелен из арбалета",
+        "causeOfDeath": "Убит собственным сыном в самый неудобный момент",
         "placeOfDeath": "Королевская Гавань",
         "photo": "https://wallpaper.forfun.com/fetch/da/da5c644dc75e379a41c3565b4e45e17e.jpeg?w=1470&r=0.5625"
     },
@@ -51,7 +51,7 @@
         "id": 7,
         "name": "Ренли Баратеон",
         "title": "Лорд Штормового Предела",
-        "causeOfDeath": "Убит тенью",
+        "causeOfDeath": "Убит теневым существом, порождённым его собственным братом",
         "placeOfDeath": "Штормовые земли",
         "photo": "https://wallpaper.forfun.com/fetch/88/88cbfbea8c64df38bf6c9ea824d55979.jpeg?w=1470&r=0.5625"
     },
@@ -59,7 +59,7 @@
         "id": 8,
         "name": "Оберин Мартелл",
         "title": "Принц Дорна",
-        "causeOfDeath": "Убит на судебном поединке",
+        "causeOfDeath": "Умер в бою от рук Григора Клигана, переоценив свои способности",
         "placeOfDeath": "Королевская Гавань",
         "photo": "https://wallpaper.forfun.com/fetch/e9/e9659e665ad7269f29e3b9440288d48c.jpeg?w=1470&r=0.5625"
     },
@@ -67,7 +67,7 @@
         "id": 9,
         "name": "Игритт",
         "title": "Одичалая",
-        "causeOfDeath": "Застреленная стрелой",
+        "causeOfDeath": "Замёрзла, пытаясь показать Джону Сноу, что 'он ничего не знает' о холоде",
         "placeOfDeath": "Чёрный замок",
         "photo": "https://wallpaper.forfun.com/fetch/b8/b81a5a358ea4a0162d545328acc7a2e5.jpeg?w=1470&r=0.5625"
     },
@@ -75,7 +75,7 @@
         "id": 10,
         "name": "Станнис Баратеон",
         "title": "Король Андалов и Первых Людей",
-        "causeOfDeath": "Убит в бою",
+        "causeOfDeath": "Погиб в битве за Винтерфелл, оставленный своим войском",
         "placeOfDeath": "Винтерфелл",
         "photo": "https://wallpaper.forfun.com/fetch/f5/f530306c7f69a7d92fac2ad0609bb8bf.jpeg?w=1470&r=0.5625"
     },
@@ -83,7 +83,7 @@
         "id": 11,
         "name": "Ширен Баратеон",
         "title": "Принцесса",
-        "causeOfDeath": "Сожжена на костре",
+        "causeOfDeath": "Ушла в огненный закат, когда кто-то перепутал её свечу с факелом",
         "placeOfDeath": "Лагерь Станниса Баратеона",
         "photo": "https://wallpaper.forfun.com/fetch/86/86a6bb195f0fe9bef9f102c6c03c729f.jpeg"
     },
@@ -91,7 +91,7 @@
         "id": 12,
         "name": "Ходор",
         "title": "Слуга дома Старков",
-        "causeOfDeath": "Убит ожившими мертвецами",
+        "causeOfDeath": "Погиб, когда его любимая дверь неожиданно решила стать стеной",
         "placeOfDeath": "Пещера Трёхглазого Ворона",
         "photo": "https://wallpaper.forfun.com/fetch/1b/1b6600ddfabfcb7d56b24bbe3ce12acc.jpeg?w=1470&r=0.5625"
     },
@@ -99,7 +99,7 @@
         "id": 13,
         "name": "Рамси Болтон",
         "title": "Лорд-хранитель Севера",
-        "causeOfDeath": "Съеден своими псами",
+        "causeOfDeath": "Стал ужином для собственных собак",
         "placeOfDeath": "Винтерфелл",
         "photo": "https://wallpaper.forfun.com/fetch/8b/8b0fe63fd13bbe97dc513b238b63f4b6.jpeg?w=1470&r=0.5625"
     },
@@ -107,7 +107,7 @@
         "id": 14,
         "name": "Маргери Тирелл",
         "title": "Королева Семи Королевств",
-        "causeOfDeath": "Погибла при взрыве Великой Септы Бейлора",
+        "causeOfDeath": "Погибла вместе с Лорасом при взрыве дикого огня в Великом Септе",
         "placeOfDeath": "Королевская Гавань",
         "photo": "https://wallpaper.forfun.com/fetch/68/6860f38727b95aff574f92cfd21d87a3.jpeg?w=1470&r=0.5625"
     },
@@ -115,7 +115,7 @@
         "id": 15,
         "name": "Лорас Тирелл",
         "title": "Рыцарь Цветов",
-        "causeOfDeath": "Погиб при взрыве Великой Септы Бейлора",
+        "causeOfDeath": "Погиб, когда пытался одолеть дракона в дуэли на шпажках, но дракон выбрал что-то более огненное",
         "placeOfDeath": "Королевская Гавань",
         "photo": "https://wallpaper.forfun.com/fetch/78/78a030e5fcbb7d3593757b7760901cde.jpeg?w=1470&r=0.5625"
     },
@@ -123,7 +123,7 @@
         "id": 16,
         "name": "Визерис Таргариен",
         "title": "Принц династии Таргариенов",
-        "causeOfDeath": "Убит расплавленным золотом",
+        "causeOfDeath": "Умер, когда Дрого 'наградил' его золотой короной",
         "placeOfDeath": "Ваэс Дотрак",
         "photo": "https://wallpaper.forfun.com/fetch/f1/f11f56db2cfb04b88132a5d4be7df047.jpeg?w=1470&r=0.5625"
     },
@@ -131,7 +131,7 @@
         "id": 17,
         "name": "Бейлон Грейджой",
         "title": "Лорд Железных Островов",
-        "causeOfDeath": "Сброшен с моста",
+        "causeOfDeath": "Утонул в ванной, крича, что Железнорождённые не тонут",
         "placeOfDeath": "Пайк",
         "photo": "https://wallpaper.forfun.com/fetch/30/302b96845808a207357a5252246335d7.jpeg?w=1470&r=0.5625"
     },
@@ -139,7 +139,7 @@
         "id": 18,
         "name": "Мирцелла Баратеон",
         "title": "Принцесса Семи Королевств",
-        "causeOfDeath": "Отравлена",
+        "causeOfDeath": "Умерла от отравленного поцелуя Элларии Сэнд",
         "placeOfDeath": "На корабле, возвращаясь в Королевскую Гавань",
         "photo": "https://wallpaper.forfun.com/fetch/61/615c8a010af5382a232a292efbb3382b.jpeg?w=1470&r=0.5625"
     },
@@ -147,7 +147,7 @@
         "id": 19,
         "name": "Роберт Баратеон",
         "title": "Король Андалов и Первых Людей",
-        "causeOfDeath": "Убит во время охоты",
+        "causeOfDeath": "Погиб, пытаясь выпить вино из бочки, но та оказалась слишком велика",
         "placeOfDeath": "Королевская Гавань",
         "photo": "https://wallpaper.forfun.com/fetch/5e/5e6fd7508d774baa0b231fe481b987e4.jpeg?w=1470&r=0.5625"
     },
@@ -155,7 +155,7 @@
         "id": 20,
         "name": "Рикон Старк",
         "title": "Лорд Винтерфелла",
-        "causeOfDeath": "Убит Рамси Болтоном",
+        "causeOfDeath": "Убит стрелой Рамси Болтона, когда бежал к брату",
         "placeOfDeath": "Винтерфелл",
         "photo": "https://wallpaper.forfun.com/fetch/53/5325507d6fe51dfba351685b1853e364.jpeg"
     },
@@ -163,7 +163,7 @@
         "id": 21,
         "name": "Томмен Баратеон",
         "title": "Король Андалов и Первых Людей",
-        "causeOfDeath": "Покончил с собой",
+        "causeOfDeath": "Прыгнул с окна после того, как увидел, что происходит в его королевстве",
         "placeOfDeath": "Королевская Гавань",
         "photo": "https://wallpaper.forfun.com/fetch/2f/2f54f93befdf81a0c6b61a3e4b94e53e.jpeg?w=1470&r=0.5625"
     },
@@ -171,7 +171,7 @@
         "id": 22,
         "name": "Лиза Аррен",
         "title": "Леди Долины",
-        "causeOfDeath": "Сброшена с Лунных дверей",
+        "causeOfDeath": ": Погибла от отравления, когда её любимый пирог оказался с сюрпризом, приготовленным по 'секретному' рецепту",
         "placeOfDeath": "Орлиное гнездо",
         "photo": "https://wallpaper.forfun.com/fetch/ae/ae4b5f42842571f8c9b06592723580e7.jpeg?w=1470&r=0.5625"
     },
@@ -179,7 +179,7 @@
         "id": 23,
         "name": "Джон Аррен",
         "title": "Десница короля",
-        "causeOfDeath": "Отравлен",
+        "causeOfDeath": "Ушёл на пенсию, теперь продаёт мемуары 'Как НЕ умереть на посту'",
         "placeOfDeath": "Королевская Гавань",
         "photo": "https://avatars.mds.yandex.net/i?id=9868644a019dee76094c5a5ae0b77a62_l-7662207-images-thumbs&n=13"
     },
@@ -187,7 +187,7 @@
         "id": 24,
         "name": "Бенджен Старк",
         "title": "Первый разведчик Ночного Дозора",
-        "causeOfDeath": "Убит Белыми Ходоками",
+        "causeOfDeath": "Погиб, защищая Джона Сноу от мертвецов",
         "placeOfDeath": "За Стеной",
         "photo": "https://7kingdoms.ru/wp-content/uploads/2010/06/benjen-stark-1920.jpg"
     },
@@ -195,7 +195,7 @@
         "id": 25,
         "name": "Бриенна Тарт",
         "title": "Леди Тарт",
-        "causeOfDeath": "Неизвестно (выжила в сериале)",
+        "causeOfDeath": "Жива и ведёт школу боевых искусств для девочек",
         "placeOfDeath": "Неизвестно",
         "photo": "https://wallpaper.forfun.com/fetch/32/321065c83d64417b10fdb9e12a995035.jpeg?w=1470&r=0.5625"
     },
@@ -203,7 +203,7 @@
         "id": 26,
         "name": "Тирион Ланнистер",
         "title": "Десница королевы",
-        "causeOfDeath": "Жив",
+        "causeOfDeath": "Перепил Вариcа, заснул под столом, проснулся героем",
         "placeOfDeath": "Неизвестно",
         "photo": "https://wallpaper.forfun.com/fetch/ce/ce279a24d286a3e8b21eef1f48af2aaf.jpeg?w=1470&r=0.5625"
     },
@@ -211,7 +211,7 @@
         "id": 27,
         "name": "Серсея Ланнистер",
         "title": "Королева Семи Королевств",
-        "causeOfDeath": "Погибла при обрушении Красного замка",
+        "causeOfDeath": "Погибла от собственных интриг, когда её коварный план сработал против неё",
         "placeOfDeath": "Королевская Гавань",
         "photo": "https://wallpaper.forfun.com/fetch/9f/9f1739ba1274196025daf8af26536281.jpeg?w=1470&r=0.5625"
     },
@@ -219,7 +219,7 @@
         "id": 28,
         "name": "Джейме Ланнистер",
         "title": "Лорд-командующий Королевской Гвардии",
-        "causeOfDeath": "Погиб при обрушении Красного замка",
+        "causeOfDeath": "Погиб, когда попытался спасти Серсею из обрушившегося замка, но оказался зажат под обломками, обняв их на прощание",
         "placeOfDeath": "Королевская Гавань",
         "photo": "https://wallpaper.forfun.com/fetch/77/779d0d7005056e0936611bf2dbcfccb7.jpeg?w=1470&r=0.5625"
     },
@@ -227,7 +227,7 @@
         "id": 29,
         "name": "Дейенерис Таргариен",
         "title": "Королева Андалов и Первых Людей",
-        "causeOfDeath": "Убита Джоном Сноу",
+        "causeOfDeath": "Убита Джоном Сноу после того, как её амбиции зашли слишком далеко",
         "placeOfDeath": "Королевская Гавань",
         "photo": "https://wallpaper.forfun.com/fetch/9e/9e7f0defa9989f0e23256755d9e2ca61.jpeg?w=1470&r=0.5625"
     },
@@ -235,7 +235,7 @@
         "id": 30,
         "name": "Джон Сноу",
         "title": "Король Севера",
-        "causeOfDeath": "Жив",
+        "causeOfDeath": "Попробовал управлять Севером с помощью своих «мудрых» советов, но все просто начали предлагать ему чай с медом и утешительные объяти",
         "placeOfDeath": "Неизвестно",
         "photo": "https://wallpaper.forfun.com/fetch/46/46b7838d480b7df5c665985979637809.jpeg?w=1470&r=0.5625"
     },
@@ -243,7 +243,7 @@
         "id": 31,
         "name": "Король Ночи",
         "title": "Лидер Белых Ходоков",
-        "causeOfDeath": "Убит Арьей Старк",
+        "causeOfDeath": "Убит Арьей Старк, когда всё казалось уже потерянным",
         "placeOfDeath": "Винтерфелл",
         "photo": "https://wallpaper.forfun.com/fetch/5b/5b3bf2a8d47aa8cf4b1ec6a98df831b1.jpeg?w=1470&r=0.5625"
     },
@@ -251,7 +251,7 @@
         "id": 32,
         "name": "Дрогон",
         "title": "Дракон Дейенерис Таргариен",
-        "causeOfDeath": "Жив",
+        "causeOfDeath": "Ушёл в долгий отпуск после того, как сжёг трон, чтобы отдохнуть от всех этих 'королевских обязанностей' и просто полетать в тёплых краях",
         "placeOfDeath": "Неизвестно",
         "photo": "https://wallpaper.forfun.com/fetch/a1/a198dbced34122363671fac57a68b973.jpeg?w=1470&r=0.5625"
     },
@@ -259,7 +259,7 @@
         "id": 33,
         "name": "Рейгал",
         "title": "Дракон Дейенерис Таргариен",
-        "causeOfDeath": "Убит баллистой",
+        "causeOfDeath": "Съел слишком много поросят, теперь его портрет в каждом кулинарном журнале",
         "placeOfDeath": "На пути к Королевской Гавани",
         "photo": "https://wallpaper.forfun.com/fetch/22/22459471ad1951ce57f126a9a0268d83.jpeg?w=1470&r=0.5625"
     },
@@ -267,7 +267,7 @@
         "id": 34,
         "name": "Визерион",
         "title": "Дракон Дейенерис Таргариен",
-        "causeOfDeath": "Убит Королем Ночи и превращен в нежить",
+        "causeOfDeath": " Погиб, когда попытался устроить ледяное шоу, но оказался слишком замороженным, чтобы двигаться дальше",
         "placeOfDeath": "За Стеной",
         "photo": "https://i.pinimg.com/originals/5b/57/02/5b5702e13ffd36b656d2604530f0c8c8.jpg"
     },
@@ -275,7 +275,7 @@
         "id": 35,
         "name": "Санса Старк",
         "title": "Королева Севера",
-        "causeOfDeath": "Жив",
+        "causeOfDeath": "Жива и ведёт кулинарное шоу 'Королева Севера и её пирожные'",
         "placeOfDeath": "Неизвестно",
         "photo": "https://wallpaper.forfun.com/fetch/5a/5a3e52fa73adb3f3ba114f4bb5c34cd8.jpeg?w=1470&r=0.5625"
     }
