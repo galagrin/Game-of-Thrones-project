@@ -16,10 +16,9 @@
 }
 
 body {
-    background-image: url("../images/mist-white-fog-wallpaper.jpg");
+    background-image: url("../images/mist-white-fog-wallpaper_mirror.png");
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: darken;
-    background-size: cover;
     color: antiquewhite;
     max-width: 1920px;
     margin: 0 auto;
