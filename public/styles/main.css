@@ -380,7 +380,19 @@ figure {
 
 /* ГАЛЕРЕЯ - КАРТЫ - КОНЕЦ */
 
+/* Разделитель */
+.divider {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.divider img {
+    width: 40%;
+    opacity: 0.75;
+}
+
 /* ГАЛЕРЕЯ ФОТОГРАФИЙ */
+
 :root {
     --transition: 1.75s cubic-bezier(0.2, 0.6, 0, 1);
 }
@@ -394,7 +406,7 @@ figure {
 }
 .slider {
     height: 100%;
-    width: 60%;
+    width: 63%;
 }
 
 .slider__layer {
@@ -430,7 +442,7 @@ figure {
 
 /* СЕКЦИЯ РЕЦЕПТОВ */
 
-.recipes{
+.recipes {
     display: flex;
     position: relative;
     margin: 50px auto;
@@ -439,27 +451,27 @@ figure {
     justify-content: space-evenly;
     width: 70%;
 }
-.recipes .recipe-box{
+.recipes .recipe-box {
     position: relative;
     width: 300px;
     height: 200px;
     margin: 0 auto;
     transform-style: preserve-3d;
 }
-.recipes.recipe-box:hover{
-    box-shadow: 0 50px 80px rgba(0,0,0,0.2);
+.recipes.recipe-box:hover {
+    box-shadow: 0 50px 80px rgba(0, 0, 0, 0.2);
 }
-.recipes .recipe-box .recipe-box__image{
+.recipes .recipe-box .recipe-box__image {
     position: absolute;
 }
-.recipes .recipe-box .recipe-box__content{
+.recipes .recipe-box .recipe-box__content {
     position: absolute;
     width: 300px;
     height: 200px;
     text-align: center;
     border-radius: 20px;
     font-size: 15px;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     transform: translateZ(20px) scaleY(0);
     transform-origin: top;
@@ -467,7 +479,7 @@ figure {
     transform-style: preserve-3d;
     padding: 20px 5px;
 }
-.content__title{
+.content__title {
     font-family: "Game-of-Thrones", "san-serif";
     font-size: 26px;
     margin: 25px 10px;
@@ -476,24 +488,29 @@ figure {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.recipes .recipe-box:hover .recipe-box__content{
+.recipes .recipe-box:hover .recipe-box__content {
     transform: translateZ(30px) scaleY(1);
 }
-.title_font{
-    background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #795b20 78%);
+.title_font {
+    background: linear-gradient(
+        to bottom,
+        #cfc09f 27%,
+        #ffecb3 40%,
+        #795b20 78%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 20px;
     text-align: center;
 }
-.content__link{
+.content__link {
     background: linear-gradient(to bottom, #cfc09f 27%, #dbb238 40%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.box__photo{
+.box__photo {
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -504,29 +521,29 @@ figure {
 
 /* СТРАНИЧКА КОНКРЕТНОГО РЕЦЕПТА */
 
-.recipe{
+.recipe {
     display: flex;
     width: 80%;
     margin: 50px auto;
     flex-direction: column;
 }
-.recipe__quotation{
+.recipe__quotation {
     text-align: center;
     font-style: italic;
     padding: 40px;
     border-radius: 40px;
     border: 1px solid #3a2c0f;
 }
-.recipe__quotation-name{
-   text-align: end;
-   margin-top: 20px;
+.recipe__quotation-name {
+    text-align: end;
+    margin-top: 20px;
 }
-.recipe__container{
+.recipe__container {
     display: flex;
     margin-top: 30px;
     justify-content: center;
 }
-.recipe__container-block{
+.recipe__container-block {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -534,36 +551,35 @@ figure {
     flex-basis: 40%;
     justify-content: space-evenly;
 }
-.recipe__container-image{
+.recipe__container-image {
     flex-basis: 60%;
 }
-.recipe__timing{
-    color:#d3b87d;
+.recipe__timing {
+    color: #d3b87d;
     font-weight: 900;
-    
 }
-.recipe__info{
+.recipe__info {
     margin-top: 60px;
     text-align: center;
 }
-.recipe__ingredients{
+.recipe__ingredients {
     margin-top: 40px;
     text-align: start;
-    color:#ffecb3;
+    color: #ffecb3;
     padding: 10px;
     border-top: 1px solid #ffecb3;
     border-bottom: 1px solid #ffecb3;
 }
-.recipe__text{
+.recipe__text {
     text-align: center;
     margin-top: 40px;
 }
-.recipe-photo{
+.recipe-photo {
     width: 100%;
     border-radius: 20px;
     padding: 10px;
 }
-li{
+li {
     list-style-type: "- ";
 }
 
