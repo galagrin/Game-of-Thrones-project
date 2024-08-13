@@ -16,14 +16,13 @@
 }
 
 body {
-  background-image: url("../images/mist-white-fog-wallpaper.jpg");
-  background-color: rgba(0, 0, 0, 0.4);
-  background-blend-mode: darken;
-  background-size: cover;
-  color: antiquewhite;
-  max-width: 1920px;
-  margin: 0 auto;
-  width: 100%;
+    background-image: url("../images/mist-white-fog-wallpaper_mirror.png");
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: darken;
+    color: antiquewhite;
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 h1,
@@ -583,4 +582,25 @@ li {
   list-style-type: "- ";
 }
 
+/* звездочки */
+.card_stars {
+    max-width: 15rem;
+    /* background: #fff; */
+    margin: 0 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    border-radius: 0.5rem;
+} 
+
+    .rating-star {
+        color: #ccc;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    
+    .rating-star.active {
+        color:  #ffecb3;
+    }
+/* звездочки */
 /* СТРАНИЧКА КОНКРЕТНОГО РЕЦЕПТА */
