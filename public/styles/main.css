@@ -64,7 +64,7 @@ h2 {
 }
 
 #myInput {
-    border: 2px solid #343433;
+    border: 2px solid rgb(250, 235, 215, 0.6);
     padding: 10px;
     font-size: 20px;
     background-color: transparent;
@@ -75,12 +75,12 @@ h2 {
 #myInput:focus {
     outline: 0;
     border: 1px solid transparent;
-    border-bottom: 2px solid #343433;
+    border-bottom: 2px solid rgb(250, 235, 215, 0.6);
     border-radius: 0;
 }
 
 #myInput::placeholder {
-    color: #343433;
+    color: rgb(250, 235, 215, 0.6);
 }
 
 #myInput[type="text"] {
