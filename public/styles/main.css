@@ -17,8 +17,12 @@
 }
 
 body {
-    background-image: url("../images/mist-white-fog-wallpaper_mirror.png");
+    background-image: url("../images/mist-white-fog-wallpaper_mirror1.jpg");
     background-color: rgba(0, 0, 0, 0.4);
+    /* более светлый сверху */
+    background-position: cover;
+    /* более тнмный сверху */
+    background-position: left;
     background-blend-mode: darken;
     color: antiquewhite;
     max-width: 1920px;
@@ -43,7 +47,12 @@ h2 {
 
 .title {
     font-size: 50px;
-    background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%);
+    background: linear-gradient(
+        to bottom,
+        #cfc09f 27%,
+        #ffecb3 40%,
+        #3a2c0f 78%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -120,7 +129,12 @@ h2 {
     cursor: pointer;
     border-radius: 50px;
     border: none;
-    background: linear-gradient(to right, #cfc09f 0%, #ffecb3 51%, #3a2c0f 100%);
+    background: linear-gradient(
+        to right,
+        #cfc09f 0%,
+        #ffecb3 51%,
+        #3a2c0f 100%
+    );
     transition: 0.5s;
     background-size: 200% auto;
 }
@@ -356,17 +370,17 @@ figure {
     transform: translateZ(200px);
 }
 
-.deck-container .deck__item:hover+* {
+.deck-container .deck__item:hover + * {
     filter: opacity(0.6);
     transform: translateZ(150px) rotateY(40deg);
 }
 
-.deck-container .deck__item:hover+*+* {
+.deck-container .deck__item:hover + * + * {
     filter: opacity(0.4);
     transform: translateZ(70px) rotateY(20deg);
 }
 
-.deck-container .deck__item:hover+*+*+* {
+.deck-container .deck__item:hover + * + * + * {
     filter: opacity(0.2);
     transform: translateZ(30px) rotateY(10deg);
 }
@@ -512,7 +526,12 @@ figure {
 }
 
 .title_font {
-    background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #795b20 78%);
+    background: linear-gradient(
+        to bottom,
+        #cfc09f 27%,
+        #ffecb3 40%,
+        #795b20 78%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
