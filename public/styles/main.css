@@ -627,6 +627,7 @@ figure {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 20px;
 }
 
 .box__photo {
@@ -666,7 +667,12 @@ figure {
     margin-top: 30px;
     justify-content: center;
 }
-
+@media screen and (max-width:1050px) {
+    .recipe__container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 .recipe__container-block {
     display: flex;
     flex-direction: column;
@@ -674,11 +680,10 @@ figure {
     margin: 10px;
     padding: 10px;
     flex-basis: 40%;
-    /* justify-content: space-evenly; */
 }
 
 .recipe__container-image {
-    flex-basis: 60%;
+    flex-basis: 50%;
 }
 
 .recipe__timing {
@@ -717,7 +722,7 @@ li {
 .poison-box {
     display: flex;
     justify-content: space-between;
-    width: 65%;
+    width: 50vw;
     margin: 40px 0 10px auto;
 }
 
@@ -731,7 +736,7 @@ li {
 }
 
 .autoRotatePoison {
-    width: 100px;
+    width: 38%;
     margin: 20px;
     animation: autoRotateAnimation;
     animation-timeline: view();
@@ -791,7 +796,7 @@ li {
     margin: 0 1rem;
     padding: 1rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    width: 50%;
+    width: 60%;
     border-radius: 0.5rem;
     margin: 0 auto;
     text-align: center;
