@@ -39,6 +39,89 @@ h2 {
     font-family: "Trajan-Pro-3", sans-serif;
 }
 
+/* ШАПКА*/
+.header {
+    background-color: #e1e1e17f;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header__img-container_image {
+    /* height: 100px; */
+    color: #333;
+}
+
+.header__img-container {
+    position: relative;
+}
+
+.header__img-container::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.header__nav {
+    width: 600px;
+}
+
+.header__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header__list-item {
+    list-style: none;
+}
+
+.header__list-item_link {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    transform: scale(1);
+    transition: transform .3s ease;
+}
+
+.header__list-item_link:hover {
+    transform: scale(1.2);
+}
+
+.header__button {
+    margin-left: 2rem;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(to right,
+            #cfc09f 0%,
+            #ffecb3 51%,
+            #3a2c0f 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+
+.header__button:hover {
+    background-position: right center;
+    color: antiquewhite;
+}
+
+.header__button:active {
+    transform: scale(0.95);
+}
+
+
 /* ПОИСК */
 .description {
     margin-bottom: 2rem;
@@ -47,12 +130,10 @@ h2 {
 
 .title {
     font-size: 50px;
-    background: linear-gradient(
-        to bottom,
-        #cfc09f 27%,
-        #ffecb3 40%,
-        #3a2c0f 78%
-    );
+    background: linear-gradient(to bottom,
+            #cfc09f 27%,
+            #ffecb3 40%,
+            #3a2c0f 78%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -129,12 +210,10 @@ h2 {
     cursor: pointer;
     border-radius: 50px;
     border: none;
-    background: linear-gradient(
-        to right,
-        #cfc09f 0%,
-        #ffecb3 51%,
-        #3a2c0f 100%
-    );
+    background: linear-gradient(to right,
+            #cfc09f 0%,
+            #ffecb3 51%,
+            #3a2c0f 100%);
     transition: 0.5s;
     background-size: 200% auto;
 }
@@ -370,17 +449,17 @@ figure {
     transform: translateZ(200px);
 }
 
-.deck-container .deck__item:hover + * {
+.deck-container .deck__item:hover+* {
     filter: opacity(0.6);
     transform: translateZ(150px) rotateY(40deg);
 }
 
-.deck-container .deck__item:hover + * + * {
+.deck-container .deck__item:hover+*+* {
     filter: opacity(0.4);
     transform: translateZ(70px) rotateY(20deg);
 }
 
-.deck-container .deck__item:hover + * + * + * {
+.deck-container .deck__item:hover+*+*+* {
     filter: opacity(0.2);
     transform: translateZ(30px) rotateY(10deg);
 }
@@ -478,11 +557,13 @@ figure {
     justify-content: space-evenly;
     width: 70%;
 }
+
 @media screen and (min-width:1715px) {
-    .recipes{
+    .recipes {
         width: 60%;
     }
 }
+
 .recipes .recipe-box {
     position: relative;
     width: 300px;
@@ -530,12 +611,10 @@ figure {
 }
 
 .title_font {
-    background: linear-gradient(
-        to bottom,
-        #cfc09f 27%,
-        #ffecb3 40%,
-        #795b20 78%
-    );
+    background: linear-gradient(to bottom,
+            #cfc09f 27%,
+            #ffecb3 40%,
+            #795b20 78%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -589,13 +668,13 @@ figure {
 }
 
 .recipe__container-block {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 10px;
-  padding: 10px;
-  flex-basis: 40%;
-  /* justify-content: space-evenly; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    flex-basis: 40%;
+    /* justify-content: space-evenly; */
 }
 
 .recipe__container-image {
@@ -608,8 +687,8 @@ figure {
 }
 
 .recipe__info {
-  margin-top: 30px;
-  text-align: center;
+    margin-top: 30px;
+    text-align: center;
 }
 
 .recipe__ingredients {
@@ -622,7 +701,7 @@ figure {
 }
 
 .recipe__text {
-  text-align: center;
+    text-align: center;
 }
 
 .recipe-photo {
@@ -634,61 +713,74 @@ figure {
 li {
     list-style-type: "- ";
 }
-.poison-box{
-  display: flex;
-  justify-content: space-between;
-  width: 65%;
-  margin: 40px 0 10px auto;
+
+.poison-box {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin: 40px 0 10px auto;
 }
-.grand{
-  width: 200px;
+
+.grand {
+    width: 200px;
 }
-.grand__img{
-  width: 100%;
-  border-radius: 50%;
+
+.grand__img {
+    width: 100%;
+    border-radius: 50%;
 }
-.autoRotatePoison{
-  width: 100px;
-  margin: 20px;
-  animation: autoRotateAnimation;
-  animation-timeline: view();
+
+.autoRotatePoison {
+    width: 100px;
+    margin: 20px;
+    animation: autoRotateAnimation;
+    animation-timeline: view();
 }
 
 @keyframes autoRotateAnimation {
-  from {
-    transform: rotate(0deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
 
-  to {
-    transform: rotate(373deg);
-  }
+    to {
+        transform: rotate(373deg);
+    }
 }
-.autoBlur{
-  animation: autoBlurAnimation both;
-  animation-timeline: view(95% 15%);
+
+.autoBlur {
+    animation: autoBlurAnimation both;
+    animation-timeline: view(95% 15%);
 }
-@keyframes autoBlurAnimation{
-  from{
-    filter: blur(260px);
-  }to{
-    filter: blur();
-  }
+
+@keyframes autoBlurAnimation {
+    from {
+        filter: blur(260px);
+    }
+
+    to {
+        filter: blur();
+    }
 }
-.autoShow{
-  animation: autoShowAnimation both;
-  animation-timeline: view(80% 10%);
+
+.autoShow {
+    animation: autoShowAnimation both;
+    animation-timeline: view(80% 10%);
 }
-@keyframes autoShowAnimation{
-  from{
-    opacity: 0;
-    transform: translateY(50px) scale(0.9);
-  }to{
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+
+@keyframes autoShowAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
+
 .divider_margin {
-  margin: 2rem 0;
+    margin: 2rem 0;
 }
 
 
@@ -704,6 +796,7 @@ li {
     margin: 0 auto;
     text-align: center;
 }
+
 .rating-star {
     color: #ccc;
     font-size: 30px;
