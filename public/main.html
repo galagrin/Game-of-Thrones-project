@@ -9,6 +9,7 @@
     <script src="./libs/particles/particles.js" defer></script>
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/forms.css">
     <title>Персонажи Игры престолов</title>
 </head>
 
@@ -44,9 +45,82 @@
             </nav>
 
             <div class="header__button-container">
-                <button class="header__button" id="enter">Войти</button>
+                <button class="header__button" id="enter" type="button">Войти</button>
             </div>
         </div>
+
+        <dialog id="dialog" class="dialog" aria-label="Форма входа и регистрации">
+            <div class="dialog-wrapper">
+                <div class="toggle-button-wrapper">
+                    <button id="login-button" aria-pressed="true" class="dialog-toggle-button"
+                        type="button">Войти</button>
+                    <button id="register-button" aria-pressed="false" class="dialog-toggle-button"
+                        type="button">Зарегистрироваться</button>
+                    <form class="exit-form" method="dialog">
+                        <button class="exit-form__button-close" type="submit" aria-label="Закрыть" title="Закрыть">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="15"
+                                height="15" viewBox="0 0 490 490">
+                                <path
+                                    d="M457 0 245 213 33 0 1 32l212 213L1 458l32 32 212-213 212 213 32-32-212-213L489 32z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <form class="registration-form form hidden" method="post" action="/">
+                    <h2 class="registration-form__second-header">Регистрация</h2>
+                    <div class="registration-form__container">
+                        <label class="registration-form__label" for="username">Имя:</label>
+                        <input class="registration-form__input" type="text" id="username" name="username" minlength="2"
+                            maxlength="20" placeholder="Введите Имя" required>
+                        <span class="registration-form__span-error" id="errorMessage-name"></span>
+                    </div>
+
+                    <div class="registration-form__container">
+                        <label class="registration-form__label" for="email">Email:</label>
+                        <input class="registration-form__input" type="email" id="email" name="email"
+                            placeholder="Введите почту" required>
+                        <span class="registration-form__span-error" id="errorMessage-email"></span>
+                    </div>
+
+                    <div class="registration-form__container">
+                        <label class="registration-form__label" for="password">Пароль:</label>
+                        <input class="registration-form__input" type="password" id="password" name="password"
+                            placeholder="Введите пароль" required>
+                        <span class="registration-form__span-error" id="errorMessage-password"></span>
+                    </div>
+
+                    <div class="registration-form__container-agreement">
+                        <label class="registration-form__label" for="check">Согласие на обработку данных</label>
+                        <input class="registration-form__input registration-form__checkbox" id="check" type="checkbox">
+                    </div>
+                    <button class="registration-form__button-registration" type="submit"
+                        disabled>Зарегистрироваться</button>
+                </form>
+
+                <form class="login-form form" method="post" action="/">
+                    <h2 class="login-form__second-header">Вход</h2>
+                    <div class="login-form__container">
+                        <label class="login-form__label" for="username_login">Имя:</label>
+                        <input class="login-form__input" type="text" id="username_login" name="username_login"
+                            placeholder="Введите имя" required>
+                        <span class="registration-form__span-error" id="errorMessage-name_login"></span>
+                    </div>
+
+                    <div class="login-form__container">
+                        <label class="login-form__label" for="password_login">Пароль:</label>
+                        <input class="login-form__input" type="password" id="password_login" name="password_login"
+                            placeholder="Введите пароль" required>
+                        <span class="registration-form__span-error" id="errorMessage-password_login"></span>
+                    </div>
+
+                    <div class="button-login__container">
+                        <button class="login-form__button-login" type="submit">Вход</button>
+                        <a class="button-login__link" href="#">Не помню пароль</a>
+                    </div>
+                </form>
+            </div>
+        </dialog>
     </header>
 
     <main>
@@ -397,6 +471,7 @@
     </main>
     <footer></footer>
 
+    <script src="./scripts/forms-script.js"></script>
     <script src="scripts/script.js"></script>
     <script type="text/javascript" src="../vanilla-tilt.js"></script>
     <script type="text/javascript">

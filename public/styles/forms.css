@@ -1,0 +1,204 @@
+:root {
+    --danger: rgb(137, 0, 0);
+}
+
+.dialog {
+    margin: auto;
+}
+
+.dialog::backdrop {
+    backdrop-filter: blur(5px);
+    background-color: #242321;
+    opacity: .8;
+}
+
+.dialog-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.toggle-button-wrapper {
+    background-color: #242321;
+    text-align: center;
+    display: flex;
+    gap: 1px;
+}
+
+.dialog-toggle-button {
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-image: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: large;
+    transition: opacity .3s ease;
+}
+
+.dialog-toggle-button[aria-pressed=false] {
+    opacity: .5;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.registration-form__container,
+.login-form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.registration-form__second-header,
+.login-form__second-header {
+    text-align: center;
+}
+
+.registration-form__input,
+.login-form__input {
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    transition: box-shadow .2s ease;
+    background-color: transparent;
+}
+
+.registration-form__input.invalid,
+.login-form__input.invalid {
+    border-color: var(--danger);
+    box-shadow: 0 0 4px 1px var(--danger);
+}
+
+.registration-form__span-error,
+.login-form__span-error {
+    margin-bottom: 10px;
+}
+
+.registration-form__container-agreement {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.registration-form__checkbox {
+    position: relative;
+    width: 1px;
+    height: 1px;
+    background-color: transparent;
+    left: -1px;
+    top: -1px;
+}
+
+.registration-form__checkbox::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: lightgray;
+    border: 1px solid gray;
+    background-position: center, left;
+    background-size: 60%, auto;
+    background-repeat: no-repeat;
+    transition: background-position .3s ease, background-color .3s ease;
+}
+
+.registration-form__checkbox:hover::after {
+    background-color: darkgray;
+    border: 1px solid black;
+}
+
+.registration-form__checkbox:checked::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='800' height='800' viewBox='0 0 490 490'%3E%3Cpath d='M452 28 198 395 29 257 0 292l207 170L490 55z'/%3E%3C/svg%3E");
+    background-color: #ffecb3;
+}
+
+.registration-form__checkbox {
+    width: 20px;
+    cursor: pointer;
+}
+
+.registration-form__button-registration {
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(to right, #cfc09f 0%, #ffecb3 51%, #3a2c0f 100%);
+    transition: background-position 0.5s ease;
+    background-size: 200% auto;
+}
+
+.registration-form__button-registration:hover {
+    background-position: right center;
+    color: antiquewhite;
+    transform: scale(0.95);
+}
+
+.registration-form__container-agreement:not(:has(input:checked))+.registration-form__button-registration {
+    pointer-events: none;
+}
+
+.exit-form__button-close {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to right, #cfc09f 0%, #ffecb3 51%, #3a2c0f 100%);
+    transition: background-position 0.5s ease;
+    background-size: 200% auto;
+}
+
+.exit-form__button-close:hover {
+    background-position: right center;
+    color: antiquewhite;
+    transform: scale(0.95);
+}
+
+.button-login__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-form__button-login {
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(to right, #cfc09f 0%, #ffecb3 51%, #3a2c0f 100%);
+    transition: background-position 0.5s ease;
+    background-size: 200% auto;
+}
+
+.login-form__button-login:hover {
+    background-position: right center;
+    color: antiquewhite;
+    transform: scale(0.95);
+}
+
+.button-login__link {
+    text-decoration: none;
+    color: darkgrey;
+}
+
+.button-login__link:hover {
+    color: black;
+}
+
+.registration-form__span-error,
+.login-form__span-error {
+    color: var(--danger);
+}
+
+.hidden {
+    display: none;
+}
