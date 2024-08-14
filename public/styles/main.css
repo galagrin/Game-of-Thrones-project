@@ -642,13 +642,37 @@ figure {
 
 /* СТРАНИЧКА КОНКРЕТНОГО РЕЦЕПТА */
 
+.container-back{
+    margin-top: 2rem;
+}
+.back_btn {
+    margin-left: 2rem;
+    padding: 17px 12px 6px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(to right,
+            #cfc09f 0%,
+            #ffecb3 51%,
+            #3a2c0f 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+.back_btn:hover {
+    background-position: right center;
+    color: antiquewhite;
+}
+
+.back_btn:active {
+    transform: scale(0.95);
+}
 .recipe {
     display: flex;
     width: 80%;
     margin: 50px auto;
     flex-direction: column;
 }
-
 .recipe__quotation {
     text-align: center;
     font-style: italic;
