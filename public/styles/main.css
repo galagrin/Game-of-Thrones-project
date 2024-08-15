@@ -37,6 +37,82 @@ h2 {
   font-family: "Trajan-Pro-3", sans-serif;
 }
 
+/* Snow effect */
+
+:root {
+  --glow-rgb: 169, 169, 169;
+}
+
+.glow-point {
+  position: absolute;
+  box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.star {
+  position: absolute;
+  z-index: 1001;
+  color: rgb(207, 181, 59);
+  font-size: 1rem;
+  animation-duration: 1500ms;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+  text-shadow: 0px 0px 1.5rem rgba(207, 181, 59, 0.5);
+  /* Golden glow */
+}
+
+@keyframes fall-1 {
+  0% {
+    transform: translate(0px, 0px) rotateX(45deg) rotateY(30deg) rotateZ(0deg) scale(0.25);
+    opacity: 0;
+  }
+
+  5% {
+    transform: translate(10px, -10px) rotateX(45deg) rotateY(30deg) rotateZ(0deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(25px, 200px) rotateX(180deg) rotateY(270deg) rotateZ(90deg) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-2 {
+  0% {
+    transform: translate(0px, 0px) rotateX(-20deg) rotateY(10deg) scale(0.25);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translate(-10px, -5px) rotateX(-20deg) rotateY(10deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-10px, 160px) rotateX(-90deg) rotateY(45deg) scale(0.25);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-3 {
+  0% {
+    transform: translate(0px, 0px) rotateX(0deg) rotateY(45deg) scale(0.5);
+    opacity: 0;
+  }
+
+  15% {
+    transform: translate(7px, 5px) rotateX(0deg) rotateY(45deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(20px, 120px) rotateX(-180deg) rotateY(-90deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
 /* ШАПКА*/
 .header {
   background-color: #e1e1e17f;
@@ -45,13 +121,11 @@ h2 {
 .header__wrapper {
   display: flex;
   justify-content: space-around;
-  gap: 50px;
   align-items: center;
   padding: 20px 0;
 }
 
 .header__img-container_image {
-  /* height: 100px; */
   color: #333;
 }
 
@@ -70,13 +144,13 @@ h2 {
 }
 
 .header__nav {
-  width: 600px;
+  flex-basis: 60%;
 }
 
 .header__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .header__list-item {
@@ -469,17 +543,17 @@ figure {
   transform: translateZ(200px);
 }
 
-.deck-container .deck__item:hover + * {
+.deck-container .deck__item:hover+* {
   filter: opacity(0.6);
   transform: translateZ(150px) rotateY(40deg);
 }
 
-.deck-container .deck__item:hover + * + * {
+.deck-container .deck__item:hover+*+* {
   filter: opacity(0.4);
   transform: translateZ(70px) rotateY(20deg);
 }
 
-.deck-container .deck__item:hover + * + * + * {
+.deck-container .deck__item:hover+*+*+* {
   filter: opacity(0.2);
   transform: translateZ(30px) rotateY(10deg);
 }
@@ -662,6 +736,7 @@ figure {
 .container-back {
   margin-top: 2rem;
 }
+
 .back_btn {
   margin-left: 2rem;
   padding: 17px 12px 6px 10px;
@@ -673,6 +748,7 @@ figure {
   transition: 0.5s;
   background-size: 200% auto;
 }
+
 .back_btn:hover {
   background-position: right center;
   color: antiquewhite;
@@ -681,12 +757,14 @@ figure {
 .back_btn:active {
   transform: scale(0.95);
 }
+
 .recipe {
   display: flex;
   width: 80%;
   margin: 50px auto;
   flex-direction: column;
 }
+
 .recipe__quotation {
   text-align: center;
   font-style: italic;
@@ -705,12 +783,14 @@ figure {
   margin-top: 30px;
   justify-content: center;
 }
+
 @media screen and (max-width: 1050px) {
   .recipe__container {
     flex-direction: column;
     align-items: center;
   }
 }
+
 .recipe__container-block {
   display: flex;
   flex-direction: column;
@@ -753,7 +833,7 @@ figure {
   padding: 10px;
 }
 
-li {
+.recipe__ingredients li {
   list-style-type: "- ";
 }
 
@@ -851,3 +931,157 @@ li {
 
 /* звездочки */
 /* СТРАНИЧКА КОНКРЕТНОГО РЕЦЕПТА */
+
+/* ФУТЕР */
+
+footer {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer::before {
+  position: absolute;
+  content: "";
+  background-color: antiquewhite;
+  width: 80%;
+  height: 1px;
+  background-position: center;
+}
+
+.infiniteRotateSlow {
+  width: 150px;
+  animation: infiniteRotateSlowAnimation 10s linear infinite;
+  -webkit-animation: infiniteRotateSlowAnimation 10s linear infinite;
+  -moz-animation: infiniteRotateSlowAnimation 10s linear infinite;
+  -ms-animation: infiniteRotateSlowAnimation 10s linear infinite;
+  -o-animation: infiniteRotateSlowAnimation 10s linear infinite;
+}
+
+@keyframes infiniteRotateSlowAnimation {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.footer__nav {
+  flex-basis: 70%;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.footer__nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: antiquewhite;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, antiquewhite, antiquewhite);
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s ease-in;
+}
+
+.nav-link:hover::before {
+  background-size: 100% 1px;
+}
+
+.footer__extra {
+  align-self: center;
+}
+
+.extra {
+  display: grid;
+}
+
+.extra__links {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "extra-one extra-two"
+    "extra-three extra-four";
+  gap: 1rem;
+  list-style-type: none;
+}
+
+.extra-one {
+  grid-area: extra-one;
+}
+
+.extra-two {
+  grid-area: extra-two;
+}
+
+.extra-three {
+  grid-area: extra-three;
+}
+
+.extra-four {
+  grid-area: extra-four;
+}
+
+.extra-link {
+  width: 30px;
+}
+
+.extra-link:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+.extra__wrapper {
+  position: relative;
+}
+
+.tooltip_top {
+  position: absolute;
+  top: -100%;
+  left: -70%;
+  font-size: 12px;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.tooltip_bottom {
+  position: absolute;
+  bottom: -100%;
+  left: -70%;
+  font-size: 12px;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.extra__wrapper:hover .tooltip_top,
+.extra__wrapper:hover .tooltip_bottom {
+  visibility: visible;
+}
