@@ -239,6 +239,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ЦИТАТЫ
 
+// Слайдер
+new Swiper(".slider", {
+  slidesPerView: 1,
+  // loop: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  centeredSlides: true,
+
+  freeMode: true,
+  speed: 2400,
+  parallax: true,
+  spaceBetween: 10,
+  mousewheel: {
+    enabled: true,
+    sensitivity: 2.4,
+  },
+});
+
+// ЗВУК
+
+const sound = document.getElementById('sound');
+        const soundButton = document.getElementById('soundButton');
+
+        async function playMusic() {
+            try {
+                await sound.play();
+                sound.volume = 0.1;
+                soundButton.classList.remove('off');
+            } catch (err) {
+                soundButton.classList.add('off');
+            }
+        }
+
+        function handlePlayButton() {
+            if (sound.paused) {
+                playMusic();
+            } else {
+                sound.pause();
+                soundButton.classList.add('off');
+            }
+        }
+
+        soundButton.addEventListener('click', handlePlayButton, false);
+        playMusic();
+
+
+
+
+
+
 // // Получение всех персонажей
 // async function GetCharacters() {
 //     // отправляет запрос и получаем ответ
@@ -285,24 +338,3 @@ document.addEventListener("DOMContentLoaded", () => {
 //         GetCharacter(input);
 //     }
 // }
-
-// Слайдер
-new Swiper(".slider", {
-  slidesPerView: 1,
-  // loop: true,
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  centeredSlides: true,
-
-  freeMode: true,
-  speed: 2400,
-  parallax: true,
-  spaceBetween: 10,
-  mousewheel: {
-    enabled: true,
-    sensitivity: 2.4,
-  },
-});
