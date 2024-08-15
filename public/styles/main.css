@@ -63,7 +63,7 @@ h2 {
 
 .header__img-container::after {
     display: block;
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -90,7 +90,7 @@ h2 {
     color: black;
     text-decoration: none;
     transform: scale(1);
-    transition: transform .3s ease;
+    transition: transform 0.3s ease;
 }
 
 .header__list-item_link:hover {
@@ -104,10 +104,12 @@ h2 {
     cursor: pointer;
     border-radius: 50px;
     border: none;
-    background: linear-gradient(to right,
-            #cfc09f 0%,
-            #ffecb3 51%,
-            #3a2c0f 100%);
+    background: linear-gradient(
+        to right,
+        #cfc09f 0%,
+        #ffecb3 51%,
+        #3a2c0f 100%
+    );
     transition: 0.5s;
     background-size: 200% auto;
 }
@@ -121,7 +123,6 @@ h2 {
     transform: scale(0.95);
 }
 
-
 /* ПОИСК */
 .description {
     margin-bottom: 2rem;
@@ -130,10 +131,12 @@ h2 {
 
 .title {
     font-size: 50px;
-    background: linear-gradient(to bottom,
-            #cfc09f 27%,
-            #ffecb3 40%,
-            #3a2c0f 78%);
+    background: linear-gradient(
+        to bottom,
+        #cfc09f 27%,
+        #ffecb3 40%,
+        #3a2c0f 78%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -210,10 +213,12 @@ h2 {
     cursor: pointer;
     border-radius: 50px;
     border: none;
-    background: linear-gradient(to right,
-            #cfc09f 0%,
-            #ffecb3 51%,
-            #3a2c0f 100%);
+    background: linear-gradient(
+        to right,
+        #cfc09f 0%,
+        #ffecb3 51%,
+        #3a2c0f 100%
+    );
     transition: 0.5s;
     background-size: 200% auto;
 }
@@ -449,17 +454,17 @@ figure {
     transform: translateZ(200px);
 }
 
-.deck-container .deck__item:hover+* {
+.deck-container .deck__item:hover + * {
     filter: opacity(0.6);
     transform: translateZ(150px) rotateY(40deg);
 }
 
-.deck-container .deck__item:hover+*+* {
+.deck-container .deck__item:hover + * + * {
     filter: opacity(0.4);
     transform: translateZ(70px) rotateY(20deg);
 }
 
-.deck-container .deck__item:hover+*+*+* {
+.deck-container .deck__item:hover + * + * + * {
     filter: opacity(0.2);
     transform: translateZ(30px) rotateY(10deg);
 }
@@ -558,7 +563,7 @@ figure {
     width: 70%;
 }
 
-@media screen and (min-width:1715px) {
+@media screen and (min-width: 1715px) {
     .recipes {
         width: 60%;
     }
@@ -611,10 +616,12 @@ figure {
 }
 
 .title_font {
-    background: linear-gradient(to bottom,
-            #cfc09f 27%,
-            #ffecb3 40%,
-            #795b20 78%);
+    background: linear-gradient(
+        to bottom,
+        #cfc09f 27%,
+        #ffecb3 40%,
+        #795b20 78%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -642,7 +649,7 @@ figure {
 
 /* СТРАНИЧКА КОНКРЕТНОГО РЕЦЕПТА */
 
-.container-back{
+.container-back {
     margin-top: 2rem;
 }
 .back_btn {
@@ -652,10 +659,12 @@ figure {
     cursor: pointer;
     border-radius: 50px;
     border: none;
-    background: linear-gradient(to right,
-            #cfc09f 0%,
-            #ffecb3 51%,
-            #3a2c0f 100%);
+    background: linear-gradient(
+        to right,
+        #cfc09f 0%,
+        #ffecb3 51%,
+        #3a2c0f 100%
+    );
     transition: 0.5s;
     background-size: 200% auto;
 }
@@ -691,7 +700,7 @@ figure {
     margin-top: 30px;
     justify-content: center;
 }
-@media screen and (max-width:1050px) {
+@media screen and (max-width: 1050px) {
     .recipe__container {
         flex-direction: column;
         align-items: center;
@@ -811,7 +820,6 @@ li {
 .divider_margin {
     margin: 2rem 0;
 }
-
 
 /* звездочки */
 .card_stars {
