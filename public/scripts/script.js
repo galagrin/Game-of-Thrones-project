@@ -126,19 +126,15 @@ const renderCard = () => {
 
         //Create and display the card details
         cardContainer.innerHTML = `<div class="card">
-        <h2><span class="first-name">${
-          firstName || ""
-        }</span><span class="last-name">${lastNameToDisplay}</span></h2>
+        <h2><span class="first-name">${firstName || ""
+          }</span><span class="last-name">${lastNameToDisplay}</span></h2>
 		    <div class="character-details">
-        <p><span class="label">Титул:</span><span class="value">${
-          character.title || ""
-        }</span></p>
-        <p><span class="label">Причина смерти:</span><span class="value">${
-          character.causeOfDeath || ""
-        }</span></p>
-        <p><span class="label">Место смерти:</span><span class="value">${
-          character.placeOfDeath || ""
-        }</span></p>
+        <p><span class="label">Титул:</span><span class="value">${character.title || ""
+          }</span></p>
+        <p><span class="label">Причина смерти:</span><span class="value">${character.causeOfDeath || ""
+          }</span></p>
+        <p><span class="label">Место смерти:</span><span class="value">${character.placeOfDeath || ""
+          }</span></p>
 		</div>
         </div>`;
       } else {
