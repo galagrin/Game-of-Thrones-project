@@ -28,6 +28,9 @@ body {
     opacity: .8;
     
     }
+    .image-container{
+        opacity: 1;
+    }
     
     h1 {
     font-family: "Game-of-Thrones";
