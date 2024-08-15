@@ -1,447 +1,517 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @font-face {
-    font-family: "Game-of-Thrones";
-    src: url(../fonts/game-of-thrones-kg25.ttf);
+  font-family: "Game-of-Thrones";
+  src: url(../fonts/game-of-thrones-kg25.ttf);
 }
 
 @font-face {
-    font-family: "Trajan-Pro-3";
-    src: url(../fonts/Trajan-Pro-3-Regular.otf);
+  font-family: "Trajan-Pro-3";
+  src: url(../fonts/Trajan-Pro-3-Regular.otf);
 }
 
 body {
-    background-image: url("../images/mist-white-fog-wallpaper_mirror1.jpg");
-    background-color: rgba(0, 0, 0, 0.4);
-    background-position: cover;
-    background-blend-mode: darken;
-    color: antiquewhite;
-    max-width: 1920px;
-    margin: 0 auto;
-    width: 100%;
+  background-image: url("../images/mist-white-fog-wallpaper_mirror1.jpg");
+  background-color: rgba(0, 0, 0, 0.4);
+  background-position: cover;
+  background-blend-mode: darken;
+  color: antiquewhite;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 h1,
 h2 {
-    font-family: "Game-of-Thrones", sans-serif;
+  font-family: "Game-of-Thrones", sans-serif;
 }
 
 * {
-    font-family: "Trajan-Pro-3", sans-serif;
+  font-family: "Trajan-Pro-3", sans-serif;
+}
+
+/* Snow effect */
+
+:root {
+  --glow-rgb: 169, 169, 169;
+}
+
+.glow-point {
+  position: absolute;
+  box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.star {
+  position: absolute;
+  z-index: 1001;
+  color: rgb(207, 181, 59);
+  font-size: 1rem;
+  animation-duration: 1500ms;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+  text-shadow: 0px 0px 1.5rem rgba(207, 181, 59, 0.5); /* Golden glow */
+}
+
+@keyframes fall-1 {
+  0% {
+    transform: translate(0px, 0px) rotateX(45deg) rotateY(30deg) rotateZ(0deg)
+      scale(0.25);
+    opacity: 0;
+  }
+
+  5% {
+    transform: translate(10px, -10px) rotateX(45deg) rotateY(30deg)
+      rotateZ(0deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(25px, 200px) rotateX(180deg) rotateY(270deg)
+      rotateZ(90deg) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-2 {
+  0% {
+    transform: translate(0px, 0px) rotateX(-20deg) rotateY(10deg) scale(0.25);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translate(-10px, -5px) rotateX(-20deg) rotateY(10deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-10px, 160px) rotateX(-90deg) rotateY(45deg)
+      scale(0.25);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-3 {
+  0% {
+    transform: translate(0px, 0px) rotateX(0deg) rotateY(45deg) scale(0.5);
+    opacity: 0;
+  }
+
+  15% {
+    transform: translate(7px, 5px) rotateX(0deg) rotateY(45deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(20px, 120px) rotateX(-180deg) rotateY(-90deg)
+      scale(0.5);
+    opacity: 0;
+  }
 }
 
 /* ШАПКА*/
 .header {
-    background-color: #e1e1e17f;
+  background-color: #e1e1e17f;
 }
 
 .header__wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
 }
 
 .header__img-container_image {
-    color: #333;
+  color: #333;
 }
 
 .header__img-container {
-    position: relative;
+  position: relative;
 }
 
 .header__img-container::after {
-    display: block;
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .header__nav {
-    flex-basis: 60%;
+  flex-basis: 60%;
 }
 
 .header__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .header__list-item {
-    list-style: none;
+  list-style: none;
 }
 
 .header__list-item_link {
-    display: inline-block;
-    color: black;
-    text-decoration: none;
-    transform: scale(1);
-    transition: transform .3s ease;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  transform: scale(1);
+  transition: transform 0.3s ease;
 }
 
 .header__list-item_link:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .header__button {
-    margin-left: 2rem;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 50px;
-    border: none;
-    background: linear-gradient(to right,
-            #cfc09f 0%,
-            #ffecb3 51%,
-            #3a2c0f 100%);
-    transition: 0.5s;
-    background-size: 200% auto;
+  margin-left: 2rem;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(to right, #cfc09f 0%, #ffecb3 51%, #3a2c0f 100%);
+  transition: 0.5s;
+  background-size: 200% auto;
 }
 
 .header__button:hover {
-    background-position: right center;
-    color: antiquewhite;
+  background-position: right center;
+  color: antiquewhite;
 }
 
 .header__button:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 #soundButton {
-    position: relative;
-    padding: 0.5rem;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+  position: relative;
+  padding: 0.5rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 #soundButton img {
-    width: 50px;
+  width: 50px;
 }
 
 .off::before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 50%;
-    right: 0;
-    border-top: 3px solid #343433;
-    transform: rotate(-45deg);
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 3px solid #343433;
+  transform: rotate(-45deg);
 }
 
 #soundButton:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
-
 
 /* ПОИСК */
 .description {
-    margin-bottom: 2rem;
-    text-align: center;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .title {
-    font-size: 50px;
-    background: linear-gradient(to bottom,
-            #cfc09f 27%,
-            #ffecb3 40%,
-            #3a2c0f 78%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 50px;
+  background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .description__text {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .searchbar {
-    margin-bottom: 2rem;
-    text-align: center;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .autocomplete {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 #myInput {
-    border: 2px solid rgb(250, 235, 215, 0.6);
-    padding: 10px;
-    font-size: 20px;
-    background-color: transparent;
-    border-radius: 50px;
-    color: antiquewhite;
+  border: 2px solid rgb(250, 235, 215, 0.6);
+  padding: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  border-radius: 50px;
+  color: antiquewhite;
 }
 
 #myInput:focus {
-    outline: 0;
-    border: 1px solid transparent;
-    border-bottom: 2px solid rgb(250, 235, 215, 0.6);
-    border-radius: 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 2px solid rgb(250, 235, 215, 0.6);
+  border-radius: 0;
 }
 
 #myInput::placeholder {
-    color: rgb(250, 235, 215, 0.6);
+  color: rgb(250, 235, 215, 0.6);
 }
 
 #myInput[type="text"] {
-    width: 100%;
+  width: 100%;
 }
 
 .autocomplete-items {
-    position: absolute;
-    border: 1px solid #575756;
-    border-bottom: none;
-    border-top: none;
-    z-index: 99;
-    top: 100%;
-    left: 0;
-    right: 0;
+  position: absolute;
+  border: 1px solid #575756;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
 }
 
 .autocomplete-items div {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #575756;
-    border-bottom: 1px solid #d4d4d4;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #575756;
+  border-bottom: 1px solid #d4d4d4;
 }
 
 .autocomplete-items div:hover {
-    background-color: rgb(100, 108, 110);
+  background-color: rgb(100, 108, 110);
 }
 
 .autocomplete-active {
-    background-color: black !important;
+  background-color: black !important;
 }
 
 #search {
-    margin-left: 2rem;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 50px;
-    border: none;
-    background: linear-gradient(to right,
-            #cfc09f 0%,
-            #ffecb3 51%,
-            #3a2c0f 100%);
-    transition: 0.5s;
-    background-size: 200% auto;
+  margin-left: 2rem;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(to right, #cfc09f 0%, #ffecb3 51%, #3a2c0f 100%);
+  transition: 0.5s;
+  background-size: 200% auto;
 }
 
 #search:hover {
-    background-position: right center;
-    color: antiquewhite;
+  background-position: right center;
+  color: antiquewhite;
 }
 
 #search:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 /* КАРТОЧКА ГЕРОЯ */
 .card {
-    margin: auto;
-    width: 90%;
-    height: 85%;
-    position: relative;
-    z-index: 2;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  margin: auto;
+  width: 90%;
+  height: 85%;
+  position: relative;
+  z-index: 2;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card h2 {
-    font-size: 2.5rem;
-    display: flex;
-    flex-direction: column;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 #card-container {
-    width: 100%;
-    height: 700px;
-    padding: 20px;
-    position: relative;
-    color: #f9f9f0;
-    /* color: #fff; */
-    background-image: url("../images/iron-throne.jpg");
-    background-position: top center;
+  width: 100%;
+  height: 700px;
+  padding: 20px;
+  position: relative;
+  color: #f9f9f0;
+  /* color: #fff; */
+  background-image: url("../images/iron-throne.jpg");
+  background-position: top center;
 }
 
 #card-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .character-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.5rem;
-    margin-top: auto;
-    gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-top: auto;
+  gap: 2rem;
 }
 
 .label {
-    display: block;
-    margin-bottom: 5px;
-    text-align: center;
+  display: block;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 .value {
-    display: block;
-    color: antiquewhite;
-    text-align: center;
+  display: block;
+  color: antiquewhite;
+  text-align: center;
 }
 
 .character-not-found-container {
-    position: absolute;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding-top: 10rem;
-    height: 100%;
-    width: 100%;
+  position: absolute;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 10rem;
+  height: 100%;
+  width: 100%;
 }
 
 .character-not-found {
-    text-align: center;
-    font-size: 3rem;
+  text-align: center;
+  font-size: 3rem;
 }
 
 /* КАРТОЧКА ГЕРОЯ */
 
 #loading {
-    position: absolute;
-    top: 50rem;
-    left: 40%;
-    z-index: 99;
-    visibility: hidden;
+  position: absolute;
+  top: 50rem;
+  left: 40%;
+  z-index: 99;
+  visibility: hidden;
 }
 
 #loading.display {
-    visibility: visible;
+  visibility: visible;
 }
 
 figure {
-    margin: 2rem 0;
-    text-align: center;
+  margin: 2rem 0;
+  text-align: center;
 }
 
 .infiniteRotate {
-    width: 300px;
-    animation: infiniteRotateAnimation 1s linear infinite;
-    -webkit-animation: infiniteRotateAnimation 1s linear infinite;
-    -moz-animation: infiniteRotateAnimation 1s linear infinite;
-    -ms-animation: infiniteRotateAnimation 1s linear infinite;
-    -o-animation: infiniteRotateAnimation 1s linear infinite;
+  width: 300px;
+  animation: infiniteRotateAnimation 1s linear infinite;
+  -webkit-animation: infiniteRotateAnimation 1s linear infinite;
+  -moz-animation: infiniteRotateAnimation 1s linear infinite;
+  -ms-animation: infiniteRotateAnimation 1s linear infinite;
+  -o-animation: infiniteRotateAnimation 1s linear infinite;
 }
 
 @keyframes infiniteRotateAnimation {
-    from {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
 
-    to {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .autoRotate {
-    width: 150px;
-    animation: autoRotateAnimation;
-    animation-timeline: view();
+  width: 150px;
+  animation: autoRotateAnimation;
+  animation-timeline: view();
 }
 
 @keyframes autoRotateAnimation {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ПОИСК */
 
 /* КАРТА И ЦИТАТЫ */
 #map-quote-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    margin: 20px auto;
-    max-width: 55%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin: 20px auto;
+  max-width: 55%;
 }
 
 #map-container {
-    flex: 1;
-    height: 400px;
-    background-color: #f0f0f035;
-    /* фон для видимости будущей карты */
-    border-radius: 8px;
+  flex: 1;
+  height: 400px;
+  background-color: #f0f0f035;
+  /* фон для видимости будущей карты */
+  border-radius: 8px;
 }
 
 #quote-container {
-    flex: 1;
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+  flex: 1;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 /* ЦИТАТЫ */
 .quote-item {
-    padding: 15px;
-    border-left: 4px solid #333;
-    background-color: rgba(255, 255, 255, 0.515);
-    border-radius: 4px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
+  padding: 15px;
+  border-left: 4px solid #333;
+  background-color: rgba(255, 255, 255, 0.515);
+  border-radius: 4px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .quote-text {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-bottom: 10px;
-    color: #333;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 .quote-author {
-    font-size: 1rem;
-    color: #555;
-    text-align: right;
+  font-size: 1rem;
+  color: #555;
+  text-align: right;
 }
 
 /* ЦИТАТЫ */
@@ -449,121 +519,121 @@ figure {
 /* ГАЛЕРЕЯ - КАРТЫ */
 
 .deck-container {
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: center;
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
 }
 
 .deck__img {
-    margin-right: 3px;
-    width: 100px;
+  margin-right: 3px;
+  width: 100px;
 }
 
 .deck-container .deck__item {
-    transition: 0.5s;
-    filter: opacity(0.1);
+  transition: 0.5s;
+  filter: opacity(0.1);
 }
 
 .deck-container .deck__item:hover {
-    filter: opacity(1);
-    transform: translateZ(200px);
+  filter: opacity(1);
+  transform: translateZ(200px);
 }
 
-.deck-container .deck__item:hover+* {
-    filter: opacity(0.6);
-    transform: translateZ(150px) rotateY(40deg);
+.deck-container .deck__item:hover + * {
+  filter: opacity(0.6);
+  transform: translateZ(150px) rotateY(40deg);
 }
 
-.deck-container .deck__item:hover+*+* {
-    filter: opacity(0.4);
-    transform: translateZ(70px) rotateY(20deg);
+.deck-container .deck__item:hover + * + * {
+  filter: opacity(0.4);
+  transform: translateZ(70px) rotateY(20deg);
 }
 
-.deck-container .deck__item:hover+*+*+* {
-    filter: opacity(0.2);
-    transform: translateZ(30px) rotateY(10deg);
+.deck-container .deck__item:hover + * + * + * {
+  filter: opacity(0.2);
+  transform: translateZ(30px) rotateY(10deg);
 }
 
 .deck-container .deck__item:has(+ * :hover) {
-    filter: opacity(0.6);
-    transform: translateZ(150px) rotateY(-40deg);
+  filter: opacity(0.6);
+  transform: translateZ(150px) rotateY(-40deg);
 }
 
 .deck-container .deck__item:has(+ * + *:hover) {
-    filter: opacity(0.4);
-    transform: translateZ(70px) rotateY(-20deg);
+  filter: opacity(0.4);
+  transform: translateZ(70px) rotateY(-20deg);
 }
 
 .deck-container .deck__item:has(+ * + * + *:hover) {
-    filter: opacity(0.2);
-    transform: translateZ(30px) rotateY(-10deg);
+  filter: opacity(0.2);
+  transform: translateZ(30px) rotateY(-10deg);
 }
 
 /* ГАЛЕРЕЯ - КАРТЫ - КОНЕЦ */
 
 /* Разделитель */
 .divider {
-    margin: 4rem 0;
-    text-align: center;
+  margin: 4rem 0;
+  text-align: center;
 }
 
 .divider img {
-    width: 40%;
-    opacity: 0.75;
+  width: 40%;
+  opacity: 0.75;
 }
 
 /* ГАЛЕРЕЯ ФОТОГРАФИЙ */
 
 :root {
-    --transition: 1.75s cubic-bezier(0.2, 0.6, 0, 1);
+  --transition: 1.75s cubic-bezier(0.2, 0.6, 0, 1);
 }
 
 .gallery {
-    height: 50vh;
-    margin: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  height: 50vh;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider {
-    height: 100%;
-    width: 63%;
+  height: 100%;
+  width: 63%;
 }
 
 .slider__layer {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    will-change: transform;
-    transition: var(--transition) !important;
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  transition: var(--transition) !important;
 }
 
 .slider__layer::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    box-shadow: inset 0 0 250px rgb(0 0 0 / 0.3);
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  box-shadow: inset 0 0 250px rgb(0 0 0 / 0.3);
 }
 
 .slider__item {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .slider__wrapper {
-    will-change: transform;
-    transform-style: preserve-3d;
-    transition: var(--transition) !important;
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: var(--transition) !important;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #fff6f6;
+  color: #fff6f6;
 }
 
 /* ГАЛЕРЕЯ ФОТОГРАФИЙ */
@@ -571,291 +641,284 @@ figure {
 /* СЕКЦИЯ РЕЦЕПТОВ */
 
 .recipes {
-    display: flex;
-    position: relative;
-    margin: 50px auto;
-    transform-style: preserve-3d;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 70%;
+  display: flex;
+  position: relative;
+  margin: 50px auto;
+  transform-style: preserve-3d;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 70%;
 }
 
-@media screen and (min-width:1715px) {
-    .recipes {
-        width: 60%;
-    }
+@media screen and (min-width: 1715px) {
+  .recipes {
+    width: 60%;
+  }
 }
 
 .recipes .recipe-box {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    margin: 0 auto;
-    transform-style: preserve-3d;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
 }
 
 .recipes.recipe-box:hover {
-    box-shadow: 0 50px 80px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 50px 80px rgba(0, 0, 0, 0.2);
 }
 
 .recipes .recipe-box .recipe-box__image {
-    position: absolute;
+  position: absolute;
 }
 
 .recipes .recipe-box .recipe-box__content {
-    position: absolute;
-    width: 300px;
-    height: 200px;
-    text-align: center;
-    border-radius: 20px;
-    font-size: 15px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    transform: translateZ(20px) scaleY(0);
-    transform-origin: top;
-    transition: 0.3s;
-    transform-style: preserve-3d;
-    padding: 20px 5px;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  transform: translateZ(20px) scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+  transform-style: preserve-3d;
+  padding: 20px 5px;
 }
 
 .content__title {
-    font-family: "Game-of-Thrones", "san-serif";
-    font-size: 26px;
-    margin: 25px 10px;
-    background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-family: "Game-of-Thrones", "san-serif";
+  font-size: 26px;
+  margin: 25px 10px;
+  background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .recipes .recipe-box:hover .recipe-box__content {
-    transform: translateZ(30px) scaleY(1);
+  transform: translateZ(30px) scaleY(1);
 }
 
 .title_font {
-    background: linear-gradient(to bottom,
-            #cfc09f 27%,
-            #ffecb3 40%,
-            #795b20 78%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 20px;
-    text-align: center;
+  background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #795b20 78%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 20px;
+  text-align: center;
 }
 
 .content__link {
-    background: linear-gradient(to bottom, #cfc09f 27%, #dbb238 40%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 20px;
+  background: linear-gradient(to bottom, #cfc09f 27%, #dbb238 40%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
 }
 
 .box__photo {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    padding: 10px;
-    border: 1px solid #795b20;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #795b20;
 }
 
 /* СЕКЦИЯ РЕЦЕПТОВ */
 
 /* СТРАНИЧКА КОНКРЕТНОГО РЕЦЕПТА */
 
-.container-back{
-    margin-top: 2rem;
+.container-back {
+  margin-top: 2rem;
 }
 .back_btn {
-    margin-left: 2rem;
-    padding: 17px 12px 6px 10px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 50px;
-    border: none;
-    background: linear-gradient(to right,
-            #cfc09f 0%,
-            #ffecb3 51%,
-            #3a2c0f 100%);
-    transition: 0.5s;
-    background-size: 200% auto;
+  margin-left: 2rem;
+  padding: 17px 12px 6px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(to right, #cfc09f 0%, #ffecb3 51%, #3a2c0f 100%);
+  transition: 0.5s;
+  background-size: 200% auto;
 }
 .back_btn:hover {
-    background-position: right center;
-    color: antiquewhite;
+  background-position: right center;
+  color: antiquewhite;
 }
 
 .back_btn:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 .recipe {
-    display: flex;
-    width: 80%;
-    margin: 50px auto;
-    flex-direction: column;
+  display: flex;
+  width: 80%;
+  margin: 50px auto;
+  flex-direction: column;
 }
 .recipe__quotation {
-    text-align: center;
-    font-style: italic;
-    padding: 40px;
-    border-radius: 40px;
-    border: 1px solid #3a2c0f;
+  text-align: center;
+  font-style: italic;
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid #3a2c0f;
 }
 
 .recipe__quotation-name {
-    text-align: end;
-    margin-top: 20px;
+  text-align: end;
+  margin-top: 20px;
 }
 
 .recipe__container {
-    display: flex;
-    margin-top: 30px;
-    justify-content: center;
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
 }
-@media screen and (max-width:1050px) {
-    .recipe__container {
-        flex-direction: column;
-        align-items: center;
-    }
+@media screen and (max-width: 1050px) {
+  .recipe__container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .recipe__container-block {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  flex-basis: 40%;
 }
 
 .recipe__container-image {
-    flex-basis: 50%;
+  flex-basis: 50%;
 }
 
 .recipe__timing {
-    color: #d3b87d;
-    font-weight: 900;
+  color: #d3b87d;
+  font-weight: 900;
 }
 
 .recipe__info {
-    margin-top: 30px;
-    text-align: center;
+  margin-top: 30px;
+  text-align: center;
 }
 
 .recipe__ingredients {
-    margin-top: 40px;
-    text-align: start;
-    color: #ffecb3;
-    padding: 10px;
-    border-top: 1px solid #ffecb3;
-    border-bottom: 1px solid #ffecb3;
+  margin-top: 40px;
+  text-align: start;
+  color: #ffecb3;
+  padding: 10px;
+  border-top: 1px solid #ffecb3;
+  border-bottom: 1px solid #ffecb3;
 }
 
 .recipe__text {
-    text-align: center;
+  text-align: center;
 }
 
 .recipe-photo {
-    width: 100%;
-    border-radius: 20px;
-    padding: 10px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .recipe__ingredients li {
-    list-style-type: "- ";
+  list-style-type: "- ";
 }
 
 .poison-box {
-    display: flex;
-    justify-content: space-between;
-    width: 50vw;
-    margin: 40px 0 10px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  margin: 40px 0 10px auto;
 }
 
 .grand {
-    width: 200px;
+  width: 200px;
 }
 
 .grand__img {
-    width: 100%;
-    border-radius: 50%;
+  width: 100%;
+  border-radius: 50%;
 }
 
 .autoRotatePoison {
-    width: 38%;
-    margin: 20px;
-    animation: autoRotateAnimation;
-    animation-timeline: view();
+  width: 38%;
+  margin: 20px;
+  animation: autoRotateAnimation;
+  animation-timeline: view();
 }
 
 @keyframes autoRotateAnimation {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(373deg);
-    }
+  to {
+    transform: rotate(373deg);
+  }
 }
 
 .autoBlur {
-    animation: autoBlurAnimation both;
-    animation-timeline: view(95% 15%);
+  animation: autoBlurAnimation both;
+  animation-timeline: view(95% 15%);
 }
 
 @keyframes autoBlurAnimation {
-    from {
-        filter: blur(260px);
-    }
+  from {
+    filter: blur(260px);
+  }
 
-    to {
-        filter: blur();
-    }
+  to {
+    filter: blur();
+  }
 }
 
 .autoShow {
-    animation: autoShowAnimation both;
-    animation-timeline: view(80% 10%);
+  animation: autoShowAnimation both;
+  animation-timeline: view(80% 10%);
 }
 
 @keyframes autoShowAnimation {
-    from {
-        opacity: 0;
-        transform: translateY(50px) scale(0.9);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .divider_margin {
-    margin: 2rem 0;
+  margin: 2rem 0;
 }
-
 
 /* звездочки */
 .card_stars {
-    max-width: 20rem;
-    /* background: #fff; */
-    margin: 0 1rem;
-    padding: 1rem;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    width: 60%;
-    border-radius: 0.5rem;
-    margin: 0 auto;
-    text-align: center;
+  max-width: 20rem;
+  /* background: #fff; */
+  margin: 0 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  width: 60%;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .rating-star {
-    color: #ccc;
-    font-size: 30px;
-    cursor: pointer;
+  color: #ccc;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .rating-star.active {
-    color: #ffecb3;
+  color: #ffecb3;
 }
 
 /* звездочки */
@@ -864,155 +927,153 @@ figure {
 /* ФУТЕР */
 
 footer {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
 }
 
 footer::before {
-    position: absolute;
-    content: "";
-    background-color: antiquewhite;
-    width: 80%;
-    height: 1px;
-    background-position: center;
+  position: absolute;
+  content: "";
+  background-color: antiquewhite;
+  width: 80%;
+  height: 1px;
+  background-position: center;
 }
 
 .infiniteRotateSlow {
-    width: 150px;
-    animation: infiniteRotateSlowAnimation 10s linear infinite;
-    -webkit-animation: infiniteRotateSlowAnimation 10s linear infinite;
-    -moz-animation: infiniteRotateSlowAnimation 10s linear infinite;
-    -ms-animation: infiniteRotateSlowAnimation 10s linear infinite;
-    -o-animation: infiniteRotateSlowAnimation 10s linear infinite;
+  width: 150px;
+  animation: infiniteRotateSlowAnimation 10s linear infinite;
+  -webkit-animation: infiniteRotateSlowAnimation 10s linear infinite;
+  -moz-animation: infiniteRotateSlowAnimation 10s linear infinite;
+  -ms-animation: infiniteRotateSlowAnimation 10s linear infinite;
+  -o-animation: infiniteRotateSlowAnimation 10s linear infinite;
 }
 
 @keyframes infiniteRotateSlowAnimation {
-    from {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
 
-    to {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .footer__nav {
-    flex-basis: 70%;
-    align-content: center;
-    justify-content: space-evenly;
+  flex-basis: 70%;
+  align-content: center;
+  justify-content: space-evenly;
 }
 
 .footer__nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  cursor: pointer;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: antiquewhite;
-    position: relative;
-    padding-bottom: 4px;
+  text-decoration: none;
+  color: antiquewhite;
+  position: relative;
+  padding-bottom: 4px;
 }
 
 .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    background-image: linear-gradient(90deg, antiquewhite, antiquewhite);
-    background-size: 0 1px;
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    transition: background-size .3s ease-in;
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, antiquewhite, antiquewhite);
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s ease-in;
 }
 
 .nav-link:hover::before {
-    background-size: 100% 1px;
+  background-size: 100% 1px;
 }
 
 .footer__extra {
-    align-self: center;
+  align-self: center;
 }
 
 .extra {
-    display: grid;
+  display: grid;
 }
 
 .extra__links {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "extra-one extra-two"
-        "extra-three extra-four";
-    gap: 1rem;
-    list-style-type: none;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "extra-one extra-two"
+    "extra-three extra-four";
+  gap: 1rem;
+  list-style-type: none;
 }
 
 .extra-one {
-    grid-area: extra-one;
+  grid-area: extra-one;
 }
 
 .extra-two {
-    grid-area: extra-two;
+  grid-area: extra-two;
 }
 
 .extra-three {
-    grid-area: extra-three;
+  grid-area: extra-three;
 }
 
 .extra-four {
-    grid-area: extra-four;
+  grid-area: extra-four;
 }
 
 .extra-link {
-    width: 30px;
+  width: 30px;
 }
 
 .extra-link:hover {
-    transform: scale(1.2);
-    transition: transform .3s ease;
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
 }
 
 .extra__wrapper {
-    position: relative;
+  position: relative;
 }
 
 .tooltip_top {
-    position: absolute;
-    top: -100%;
-    left: -70%;
-    font-size: 12px;
-    visibility: hidden;
-    background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: -100%;
+  left: -70%;
+  font-size: 12px;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .tooltip_bottom {
-    position: absolute;
-    bottom: -100%;
-    left: -70%;
-    font-size: 12px;
-    visibility: hidden;
-    background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: -100%;
+  left: -70%;
+  font-size: 12px;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .extra__wrapper:hover .tooltip_top,
 .extra__wrapper:hover .tooltip_bottom {
-    visibility: visible;
+  visibility: visible;
 }
-
-
-
