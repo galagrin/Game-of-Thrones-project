@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -19,10 +20,7 @@
 body {
     background-image: url("../images/mist-white-fog-wallpaper_mirror1.jpg");
     background-color: rgba(0, 0, 0, 0.4);
-    /* более светлый сверху */
     background-position: cover;
-    /* более тнмный сверху */
-    background-position: left;
     background-blend-mode: darken;
     color: antiquewhite;
     max-width: 1920px;
@@ -119,6 +117,32 @@ h2 {
 
 .header__button:active {
     transform: scale(0.95);
+}
+
+#soundButton {
+    position: relative;
+    padding: 0.5rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#soundButton img {
+    width: 50px;
+}
+
+.off::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 3px solid #343433;
+    transform: rotate(-45deg);
+}
+
+#soundButton:active {
+    transform: scale(0.9);
 }
 
 
