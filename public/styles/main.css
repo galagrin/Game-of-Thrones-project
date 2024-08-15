@@ -45,13 +45,11 @@ h2 {
 .header__wrapper {
     display: flex;
     justify-content: space-around;
-    gap: 50px;
     align-items: center;
     padding: 20px 0;
 }
 
 .header__img-container_image {
-    /* height: 100px; */
     color: #333;
 }
 
@@ -70,13 +68,13 @@ h2 {
 }
 
 .header__nav {
-    width: 600px;
+    flex-basis: 70%;
 }
 
 .header__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .header__list-item {
@@ -763,7 +761,7 @@ figure {
     padding: 10px;
 }
 
-li {
+.recipe__ingredients li {
     list-style-type: "- ";
 }
 
@@ -862,3 +860,159 @@ li {
 
 /* звездочки */
 /* СТРАНИЧКА КОНКРЕТНОГО РЕЦЕПТА */
+
+/* ФУТЕР */
+
+footer {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer::before {
+    position: absolute;
+    content: "";
+    background-color: antiquewhite;
+    width: 80%;
+    height: 1px;
+    background-position: center;
+}
+
+.infiniteRotateSlow {
+    width: 150px;
+    animation: infiniteRotateSlowAnimation 10s linear infinite;
+    -webkit-animation: infiniteRotateSlowAnimation 10s linear infinite;
+    -moz-animation: infiniteRotateSlowAnimation 10s linear infinite;
+    -ms-animation: infiniteRotateSlowAnimation 10s linear infinite;
+    -o-animation: infiniteRotateSlowAnimation 10s linear infinite;
+}
+
+@keyframes infiniteRotateSlowAnimation {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.footer__nav {
+    flex-basis: 70%;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.footer__nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: antiquewhite;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background-image: linear-gradient(90deg, antiquewhite, antiquewhite);
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size .3s ease-in;
+}
+
+.nav-link:hover::before {
+    background-size: 100% 1px;
+}
+
+.footer__extra {
+    align-self: center;
+}
+
+.extra {
+    display: grid;
+}
+
+.extra__links {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "extra-one extra-two"
+        "extra-three extra-four";
+    gap: 1rem;
+    list-style-type: none;
+}
+
+.extra-one {
+    grid-area: extra-one;
+}
+
+.extra-two {
+    grid-area: extra-two;
+}
+
+.extra-three {
+    grid-area: extra-three;
+}
+
+.extra-four {
+    grid-area: extra-four;
+}
+
+.extra-link {
+    width: 30px;
+}
+
+.extra-link:hover {
+    transform: scale(1.2);
+    transition: transform .3s ease;
+}
+
+.extra__wrapper {
+    position: relative;
+}
+
+.tooltip_top {
+    position: absolute;
+    top: -100%;
+    left: -70%;
+    font-size: 12px;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.tooltip_bottom {
+    position: absolute;
+    bottom: -100%;
+    left: -70%;
+    font-size: 12px;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.extra__wrapper:hover .tooltip_top,
+.extra__wrapper:hover .tooltip_bottom {
+    visibility: visible;
+}
+
+
+
