@@ -283,53 +283,6 @@ function handlePlayButton() {
 soundButton.addEventListener("click", handlePlayButton, false);
 playMusic();
 
-// // Получение всех персонажей
-// async function GetCharacters() {
-//     // отправляет запрос и получаем ответ
-//     const response = await fetch("http://localhost:3000/api/characters",
-//         {
-//             method: "GET",
-//             headers: { Accept: "application/json" },
-//         }
-//         );
-//     // если запрос прошел нормально
-//     if (response.ok === true) {
-//         // получаем данные
-//         const characters = await response.json();
-//         // создаем кнопки для каждого персонажа
-//         characters.forEach((character) => {
-//             document.querySelector(`button[data-id='${character.id}']`).addEventListener("click", () => {
-//                 GetCharacter(character.id);
-//             });
-//         });
-//     }
-// }
-
-// // Получение одного персонажа по id
-// async function GetCharacter(id) {
-//     const response = await fetch(`http://localhost:3000/api/characters/${id}`,
-//         {
-//             method: "GET",
-//             headers: { Accept: "application/json" },
-//         }
-//         );
-//     if (response.ok === true) {
-//         const character = await response.json();
-//         // очищаем таблицу
-//         tbody.innerHTML = "";
-//         // добавляем полученный персонаж в таблицу
-//         tbody.append(row(character));
-//     }
-// }
-
-// // Функция для поиска персонажа по id
-// function searchCharacter() {
-//     const input = document.getElementById("characterIdInput").value;
-//     if (input) {
-//         GetCharacter(input);
-//     }
-// }
-
 // Snow effect
 let start = new Date().getTime();
 
@@ -468,3 +421,18 @@ window.onmousemove = (e) => handleOnMove(e);
 window.ontouchmove = (e) => handleOnMove(e.touches[0]);
 
 document.body.onmouseleave = () => updateLastMousePosition(originPosition);
+
+
+// КАРТА
+
+const map = document.getElementById('map');
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    map.requestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
+  }
+}
+
+map.addEventListener('click', toggleFullScreen);
