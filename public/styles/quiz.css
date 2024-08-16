@@ -7,6 +7,63 @@
     font-family: "Trajan-Pro-3";
     src: url(../fonts/Trajan-Pro-3-Regular.otf);
 }
+/* ШАПКА*/
+.header {
+background-color: #e1e1e17f;
+font-family: "Trajan-Pro-3";
+}
+
+.header__wrapper {
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 20px 0;
+}
+
+.header__img-container_image {
+color: #333;
+}
+
+.header__img-container {
+position: relative;
+}
+
+.header__img-container::after {
+display: block;
+content: "";
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+}
+
+.header__nav {
+flex-basis: 60%;
+}
+
+.header__list {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+.header__list-item {
+list-style: none;
+}
+
+.header__list-item_link {
+display: inline-block;
+color: black;
+text-decoration: none;
+transform: scale(1);
+transition: transform 0.3s ease;
+}
+
+.header__list-item_link:hover {
+transform: scale(1.2);
+}
+
 
 body {
 
@@ -27,6 +84,9 @@ body {
     box-shadow: 0 0 10px rgba(92, 28, 28, 0.2);
     opacity: .8;
     
+    }
+    .image-container{
+        opacity: 1;
     }
     
     h1 {
@@ -199,3 +259,159 @@ body {
         background-color: rgba(0, 0, 0, 0.5); /* Регулируйте значение альфа-канала (0.5) для нужной степени затемнения */
         z-index: 0;
     }
+
+    /* ФУТЕР */
+
+footer {
+font-family: "Trajan-Pro-3";
+margin-top: 2rem;
+margin-bottom: 1rem;
+position: relative;
+display: flex;
+justify-content: space-around;
+}
+
+footer::before {
+position: absolute;
+content: "";
+background-color: antiquewhite;
+width: 80%;
+height: 1px;
+background-position: center;
+}
+
+.infiniteRotateSlow {
+width: 150px;
+animation: infiniteRotateSlowAnimation 10s linear infinite;
+-webkit-animation: infiniteRotateSlowAnimation 10s linear infinite;
+-moz-animation: infiniteRotateSlowAnimation 10s linear infinite;
+-ms-animation: infiniteRotateSlowAnimation 10s linear infinite;
+-o-animation: infiniteRotateSlowAnimation 10s linear infinite;
+}
+
+@keyframes infiniteRotateSlowAnimation {
+from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+}
+
+.footer__nav {
+flex-basis: 70%;
+align-content: center;
+justify-content: space-evenly;
+}
+
+.footer__nav ul {
+display: flex;
+justify-content: space-evenly;
+list-style-type: none;
+cursor: pointer;
+}
+
+.nav-link {
+text-decoration: none;
+color: antiquewhite;
+position: relative;
+padding-bottom: 4px;
+}
+
+.nav-link::before {
+content: "";
+position: absolute;
+width: 100%;
+top: 0;
+bottom: 0;
+background-image: linear-gradient(90deg, antiquewhite, antiquewhite);
+background-size: 0 1px;
+background-repeat: no-repeat;
+background-position: left bottom;
+transition: background-size 0.3s ease-in;
+}
+
+.nav-link:hover::before {
+background-size: 100% 1px;
+}
+
+.footer__extra {
+align-self: center;
+}
+
+.extra {
+display: grid;
+}
+
+.extra__links {
+color: #cfc09f;
+display: grid;
+grid-template-rows: repeat(2, 1fr);
+grid-template-columns: repeat(2, 1fr);
+grid-template-areas:
+    "extra-one extra-two"
+    "extra-three extra-four";
+gap: 1rem;
+list-style-type: none;
+}
+
+.extra-one {
+grid-area: extra-one;
+}
+
+.extra-two {
+grid-area: extra-two;
+}
+
+.extra-three {
+grid-area: extra-three;
+}
+
+.extra-four {
+grid-area: extra-four;
+}
+
+.extra-link {
+width: 30px;
+}
+
+.extra-link:hover {
+transform: scale(1.2);
+transition: transform 0.3s ease;
+}
+
+.extra__wrapper {
+position: relative;
+}
+
+.tooltip_top {
+position: absolute;
+top: -100%;
+left: -70%;
+font-size: 12px;
+visibility: hidden;
+background-color: rgba(0, 0, 0, 0.7);
+}
+
+.tooltip_bottom {
+position: absolute;
+bottom: -100%;
+left: -70%;
+font-size: 12px;
+visibility: hidden;
+background-color: rgba(0, 0, 0, 0.7);
+}
+
+.extra__wrapper:hover .tooltip_top,
+.extra__wrapper:hover .tooltip_bottom {
+visibility: visible;
+}
