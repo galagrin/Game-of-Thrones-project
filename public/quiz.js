@@ -4,7 +4,7 @@ const questions = [
         question: 'Как зовут главную героиню сериала, самую юную представительницу дома Старков?',
         options: ['Кейтлин Старк', 'Арья Старк','Санса Старк'],
         correctAnswer: 1,
-        image: '../public/images/quiz/1.png',
+        image: '../public/images/quiz/1.jpg',
     },
 
     {
@@ -32,7 +32,7 @@ const questions = [
         question: 'Как зовут матерых драконов Дейенерис Таргариен?',
         options: ['Визерис, Дрого, Кхал', 'Дрогон, Визерион, Рейгаль', 'Эйгон, Рейгар, Варис'],
         correctAnswer: 1,
-        image: '../public/images/quiz/5.png',
+        image: '../public/images/quiz/5.jpg',
     },
 
     {
@@ -178,7 +178,7 @@ function displayResult(isCorrect) {
   resultImage.style.display = 'block';
   if (isCorrect) {
     resultText.innerText = 'Правильно!';
-    resultImage.src = '../public/images/quiz/true-pic.png';
+    resultImage.src = '../public/images/quiz/true-pic.jpg';
   } else {
     resultText.innerText = 'Неправильно!';
     resultImage.src = '../public/images/quiz/false-pic.jpg';
