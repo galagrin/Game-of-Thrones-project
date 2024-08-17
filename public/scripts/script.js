@@ -166,6 +166,52 @@ myInput.addEventListener("focus", () => {
 
 // ПОИСК
 
+// СЛУЧАЙНЫЙ ПЕРСОНАЖ
+
+const randomButton = document.getElementById("random");
+
+const showSoul = () => {
+  fetch("http://localhost:3000/api/characters")
+    .then(response => response.json().then(array => {
+      let randomItem = array[Math.floor(Math.random() * array.length)]
+
+      const characterPhoto = randomItem.photo
+        ? `url(${randomItem.photo})`
+        : "url('/public/images/iron-throne.jpg')";
+      cardContainer.style.backgroundImage = characterPhoto;
+      cardContainer.style.backgroundSize = "cover";
+      cardContainer.style.backgroundPosition = "top center";
+      cardContainer.style.backgroundRepeat = "no-repeat";
+
+      //Split the name into first and last name
+      const [firstName, lastName] = (randomItem.name || "").split(" ");
+
+      //Handle undefined
+      const lastNameToDisplay = lastName !== undefined ? lastName : "";
+
+      //Create and display the card details
+      cardContainer.innerHTML = `<div class="card">
+        <h2><span class="first-name">${firstName || ""
+        }</span><span class="last-name">${lastNameToDisplay}</span></h2>
+        <div class="character-details">
+        <p><span class="label">Титул:</span><span class="value">${randomItem.title || ""
+        }</span></p>
+        <p><span class="label">Причина смерти:</span><span class="value">${randomItem.causeOfDeath || ""
+        }</span></p>
+        <p><span class="label">Место смерти:</span><span class="value">${randomItem.placeOfDeath || ""
+        }</span></p>
+    </div>
+        </div>`;
+    }))
+    .finally(() => {
+      loader.classList.remove("display");
+    });
+};
+
+randomButton.addEventListener("click", showSoul);
+
+// СЛУЧАЙНЫЙ ПЕРСОНАЖ
+
 // ЦИТАТЫ
 const quotes = [
   {
