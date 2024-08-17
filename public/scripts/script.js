@@ -75,7 +75,7 @@ let names = [];
 // https://your-username.github.io/your-repo/api/data.
 
 // https://galagrin.github.io/JS-project_group84/
-fetch("https://galagrin.github.io/JS-project_group84/api/characters")
+fetch("http://galagrin.github.io/JS-project_group84/api/characters")
   .then((res) => res.json())
   .then((characters) => {
     characters.forEach((character) => {
