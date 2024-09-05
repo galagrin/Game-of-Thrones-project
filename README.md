@@ -1,6 +1,6 @@
 # Game of Thrones Project 🐉🏰
 
-<img height="300px" src="./public/images/readmegif.gif">
+<img src="./public/images/readmegif.gif">
 
 Welcome to the Game of Thrones project! 🏰 <br>
 A comprehensive exploration of the brutal and beautiful world of Westeros, this project provides detailed insights into character deaths, culinary delights inspired by the series, and a visual gallery of iconic scenes. Perfect for fans who want to dive deeper into the lore of "Game of Thrones" 🐲🏰
